@@ -1,0 +1,72 @@
+.Box {
+  text-align: center;
+    width: 70%; 
+    height: 1200px;
+  position: absolute;
+    top: 17%;
+    left: 14%; 
+    border-radius: 5px;
+    box-shadow: 0 8px 30px 0 rgba(0,0,0,0.2);
+}
+
+/* .Reservation-name {
+  padding: 45px;
+  text-align: left;
+} */
+
+.button1 {
+  transform: translateX(0);
+}
+
+.flex1 {
+  height: 500px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.2);
+}
+
+.flex2 {
+  height: 500px;
+  border-radius: 5px;
+  width: 350px;
+  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.2);
+}
+
+.flex3 {
+  height: 500px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.2);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hotel1 {
+  width: 70%; 
+  padding-top: 30px;
+  border-radius: 5px;
+}
+
+.title {
+  padding: 45px;
+  text-align: left;
+}
+
+.room {
+  border-radius: 5px;
+  width: 100%; 
+}
+
+.roomTitle {
+  text-align: left;
+  padding: 5px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.list li {
+  padding-bottom: 20px;
+}

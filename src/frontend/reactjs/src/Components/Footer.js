@@ -8,7 +8,7 @@ function Footer() {
         <nav className="navFooter">
             <h3>LikeHome</h3>
             <div>
-                Copywrite 2022 CodeMonkeys
+            <span> &copy; </span> 2022 CodeMonkeys
             </div>
         </nav>
     </footer>

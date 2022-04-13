@@ -85,3 +85,22 @@ export const list = async (params: listParams) => {
   const resp: AxiosResponse = await axios.request(options);
   return resp;
 }
+
+export const details = async (id: string) => {
+
+  // call hotels4 properties/get-details endpoint
+  const options: AxiosRequestConfig = {
+    method: 'GET',
+    url: 'https://hotels4.p.rapidapi.com/properties/get-details',
+    params: {
+      id
+    },
+    headers: {
+      'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+      'X-RapidAPI-Key': '748ac67f3cmshf3e99f25f444fd0p1d75ebjsn397e2d620ed4'
+    }
+  };
+
+  const resp: AxiosResponse = await axios.request(options);
+  return resp;
+}

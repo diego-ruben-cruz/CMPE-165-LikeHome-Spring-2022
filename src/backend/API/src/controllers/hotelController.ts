@@ -21,11 +21,30 @@ export const searchHotels = async (req: any, res: any, next: any) => {
   }
 }
 
-export const listHotels = async (req: any, res: any, next: any) => {
-  console.log('Called listHotels method');
+export const getDetails = async (req: any, res: any, next: any) => {
+  console.log('Called getDetails method');
+
+  const { hotelId } = req.params;
 
   try {
     // call api and get data
+    const resp = await hotelServices.details(hotelId);
+    res.status(httpStatus.OK).json(resp.data);
+  } catch (err) {
+    console.log('search error');
+    next(err);
+  }
+}
+
+export const listHotels = async (req: any, res: any, next: any) => {
+  console.log('Called listHotels method');
+
+  const { name, ammens } = req.body;
+  const why = req.body;
+
+  try {
+    // call api and get data
+<<<<<<< HEAD
     const resp = await hotelServices.list(req.query)
     res.status(httpStatus.OK).json(resp.data.body.searchResults.results);
     // const sample = {
@@ -39,6 +58,13 @@ export const listHotels = async (req: any, res: any, next: any) => {
     // }  
     // await db.collection('Hotels').doc('Motel96').set(sample, {merge:true});
     // res.status(httpStatus.OK).json({'uh': 'huh'});
+=======
+    // const resp = await hotelServices.list(req.query)
+    // res.status(httpStatus.OK).json(resp.data.body.searchResults.results);
+    console.log(why);
+    await db.collection('Hotels').doc(name).set(why, {merge:true});
+    res.status(httpStatus.OK).json({'uh': 'huh'});
+>>>>>>> origin/main
   } catch (err) {
     console.log('search error');
     next(err);

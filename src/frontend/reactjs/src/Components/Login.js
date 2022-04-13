@@ -29,7 +29,7 @@ function Login() {
                 </div>
 
                 <div class ="Signup_link">
-                    Don't have an account? <a href="#"> Sign Up </a>
+                    Don't have an account? <a href="/signup"> Sign Up </a>
                 </div>
 
                 <div class ="pass_forgot">

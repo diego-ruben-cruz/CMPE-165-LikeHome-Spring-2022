@@ -13,7 +13,10 @@ function SearchBar(){
                 <input type = "date" placeholder = "Check In" class = "text2" name = "check-in"/>
                 <input type = "date" placeholder = "Check Out" class = "text3"  name = "check-out"/>
                 <input type = "text" placeholder = "Guests" class = "text4"  name = "guests"/>
-                <button type = "submit" class = "button1" onClick={"/searchpage"}><Link to="/searchpage">Search</Link></button>
+                <a href = '/searchpage'>
+                    <button type = "submit" class = "button1" >Search</button>
+                </a>
+                
             </div>
         </div>
     );
