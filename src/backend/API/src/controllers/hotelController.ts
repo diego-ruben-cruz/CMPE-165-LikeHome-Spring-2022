@@ -44,27 +44,12 @@ export const listHotels = async (req: any, res: any, next: any) => {
 
   try {
     // call api and get data
-<<<<<<< HEAD
     const resp = await hotelServices.list(req.query)
     res.status(httpStatus.OK).json(resp.data.body.searchResults.results);
-    // const sample = {
-    //   name: 'motel 69',
-    //   rooms: ['4','2','0'],
-    //   ammenities: {
-    //     cat: true,
-    //     dog: true,
-    //     cars: 3
-    //   }
-    // }  
-    // await db.collection('Hotels').doc('Motel96').set(sample, {merge:true});
-    // res.status(httpStatus.OK).json({'uh': 'huh'});
-=======
-    // const resp = await hotelServices.list(req.query)
-    // res.status(httpStatus.OK).json(resp.data.body.searchResults.results);
+   
     console.log(why);
     await db.collection('Hotels').doc(name).set(why, {merge:true});
     res.status(httpStatus.OK).json({'uh': 'huh'});
->>>>>>> origin/main
   } catch (err) {
     console.log('search error');
     next(err);
