@@ -23,6 +23,7 @@ function App() {
         <Route path="/reservationpage" component={ReservationPage} />
         <Route path="/profile" component={ProfileDetails}/>
         <Route path="/payment" component={Payment} />
+        <Route path="/profile" component={ProfileDetails}/>
     <Home/>
     </Switch>
     <Alert/>
