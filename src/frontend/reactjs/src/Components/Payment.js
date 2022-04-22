@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
@@ -9,8 +9,55 @@ import Container from './Container';
 import Card from '@mui/material/Card';
 import Footer from './Footer';
 import Header from './Header';
+import { auth, db } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
+import { signInWithEmailAndPassword, updateEmail, updateProfile } from 'firebase/auth';
+import * as api from '../api';
 
-const Payment = () => {
+
+const Payment = ({handleClose}) => {
+
+  const [email, setEmail] = useState("");
+  const [ccv, setCcv] = useState("");
+  const [country, setCountry] = useState("");
+  const [name, setFullName] = useState("");
+  const [expiration, setExp] = useState("");
+  const [number, setNumber] = useState(""); //credit card number
+  
+  
+  //const [name, setName] = useState("");
+  
+
+  const handleSubmit = async () => {
+    try {
+      const paymentResp = await api.payment.pay({
+
+        //Dummy for now
+        accoundId: email,
+        reservationId: '08592959-0906-4086-a50c-05dc3ac5c8ec',
+        paymentDetails: {
+            ccv: ccv,
+            exp: expiration,
+            number: number,
+            country: country,
+            fullname: name,
+            
+
+           },
+        saveDetails: true
+        
+      })
+      console.log(paymentResp);
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+
+
+
   return (
       <>
       <Header/>
@@ -39,6 +86,8 @@ const Payment = () => {
                   label="First name *"
                   variant="outlined"
                   name={'fullName'}
+                  value = {name}
+                  onChange={(e) => setFullName(e.target.value)}
                   fullWidth
                 />
               </Grid>
@@ -54,6 +103,8 @@ const Payment = () => {
                   label="Email *"
                   variant="outlined"
                   name={'email'}
+                  value = {email}
+                  onChange={(e) => setEmail(e.target.value)}
                   fullWidth
                 />
               </Grid>
@@ -69,6 +120,8 @@ const Payment = () => {
                   label="Country *"
                   variant="outlined"
                   name={'country'}
+                  value ={country}
+                  onChange ={(e) => setCountry(e.target.value)}
                   fullWidth
                 />
               </Grid>
@@ -118,6 +171,8 @@ const Payment = () => {
                     label="Card number *"
                     variant="outlined"
                     name={'cardNumber'}
+                    value = {number}
+                    onChange={(e) => setNumber(e.target.value)}
                     fullWidth
                   />
                 </Grid>
@@ -148,6 +203,8 @@ const Payment = () => {
                     label="Expiration date *"
                     variant="outlined"
                     name={'date'}
+                    value = {expiration}
+                    onChange={(e) => setExp(e.target.value)}
                     fullWidth
                   />
                 </Grid>
@@ -178,6 +235,8 @@ const Payment = () => {
                     label="Card CVV *"
                     variant="outlined"
                     name={'cvv'}
+                    value = {ccv}
+                  onChange={(e) => setCcv(e.target.value)}
                     fullWidth
                   />
                 </Grid>
@@ -195,8 +254,9 @@ const Payment = () => {
                   >
                     <Button
                       size={'large'}
-                      variant={'contained'}
+                      variant="contained"
                       type={'submit'}
+                      onClick = {handleSubmit}
                     >
                       Submit
                     </Button>

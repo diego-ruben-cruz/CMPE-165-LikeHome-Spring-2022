@@ -17,13 +17,14 @@ const callApi = (method, endpoint, params, body) => {
     method,
     url: 'http://localhost:8080/api/' + endpoint,
     params,
-    body
+    data: body
   };
 
   return axios.request(options).then(function (response) {
       return response;
   }).catch(function (error) {
-      console.error(error);
+      // console.error(error.response.data);
+      return error.response;
   });
 }
 
@@ -63,7 +64,7 @@ const api = {
     // {
     //   accountId: "jerry@hotmail.com",
     //   hotelId: "624429",
-    //   price: "125"
+    //   price: "125",
     //   checkIn: "03-23-19",
     //   checkOut: "03-24-19",
     //   guests: "1"

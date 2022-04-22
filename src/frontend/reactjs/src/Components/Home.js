@@ -20,22 +20,117 @@ const Home = () => {
 
   return (
     <>
-        <Header/>
-        <Banner/>
-        <RecTable/>
-        <h1 className='home'>A Home Far Away From Home</h1>
-        <div 
-        className="h1"
-        style={{
-          height: 500,
-        }}
-        >
-          <SearchBar location="City, State" numberOfPeople="Number of Guests"/>
-        </div>
-        
+    <Header/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <Box
+      minHeight={300}
+      height={'auto'}
+      position={'relative'}
+    >
+      <Container position={'relative'} zIndex={2}>
+        <Box>
+          <Box marginBottom={4}>
+            <Typography
+              variant="h3"
+              gutterBottom
+              sx={{
+                fontWeight: 900,
+                color: 'Black',
+              }}
+            >
+              A Home Far Away From Home
+            </Typography>
+            <Typography
+              variant="h6"
+              component="p"
+              color="text.primary"
+              sx={{
+                fontWeight: 400,
+                color: 'black',
+              }}
+            >
+              With LikeHome
+              <br />
+              Stuff should go here
+            </Typography>
+          </Box>
+          <Box
+            padding={{ xs: 3, sm: 6 }}
+            width={1}
+            component={Card}
+            boxShadow={1}
+          >
+            <form noValidate autoComplete="off">
+              <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
+                <Box
+                  width={1}
+                  marginRight={{ xs: 0, md: 2 }}
+                  marginBottom={{ xs: 2, md: 0 }}
+                >
+                  <TextField
+                    sx={{
+                      height: 54,
+                    }}
+                    variant="outlined"
+                    color="primary"
+                    size="medium"
+                    fullWidth
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <Box
+                            component={'svg'}
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            width={24}
+                            height={24}
+                            color={'primary.main'}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            />
+                          </Box>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Box>
+                <Box>
+                  <Button
+                    sx={{ height: 54, whiteSpace: 'nowrap' }}
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    fullWidth
+                  >
+                    Search Now
+                  </Button>
+                </Box>
+              </Box>
+            </form>
 
-
-        <Footer/>
+          </Box>
+        </Box>
+        <ContainerCards/>
+    <TravelingText/>
+    <Template1/>
+    <Template2/>
+    <Template3/>
+      </Container>
+    </Box>
+    <Footer/>
     </>
   );
 };
