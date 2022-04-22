@@ -225,7 +225,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"accountId\": \"jerry@hotmail.com\",\r\n    \"hotelId\": 624429,\r\n    \"checkIn\": \"03-23-19\",\r\n    \"checkOut\": \"03-24-19\",\r\n    \"guests\": \"1\"\r\n}",
+							"raw": "{\r\n    \"accountId\": \"jerry2@hotmail.com\",\r\n    \"hotelId\": \"624429\",\r\n    \"price\": \"125\",\r\n    \"checkIn\": \"03-23-19\",\r\n    \"checkOut\": \"03-26-19\",\r\n    \"guests\": \"1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -304,7 +304,7 @@
 							"variable": [
 								{
 									"key": "reservationId",
-									"value": null
+									"value": "d07d6878-be86-4d69-961b-b9cbb741f96c"
 								}
 							]
 						}
@@ -323,7 +323,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"accountId\": \"jerry@hotmail.com\",\r\n  \"reservationId\": \"08592959-0906-4086-a50c-05dc3ac5c8ec\",\r\n  \"paymentDetails\": {\r\n    \"number\": \"4242424242424242\",\r\n    \"exp\": \"03/32\",\r\n    \"cvc\": \"123\",\r\n    \"address\": \"123 whatever\",\r\n    \"city\": \"San Jose\",\r\n    \"state\": \"CA\",\r\n    \"zip\": \"64044\"\r\n  },\r\n  \"saveDetails\": true\r\n}",
+							"raw": "{\r\n  \"accountId\": \"jerry2@hotmail.com\",\r\n  \"reservationId\": \"e89ed3b6-9935-4a0d-9957-b9142f9b8eb8\",\r\n  \"paymentDetails\": {\r\n    \"number\": \"4242424242424242\",\r\n    \"exp\": \"03/32\",\r\n    \"cvc\": \"123\",\r\n    \"address\": \"123 whatever\",\r\n    \"city\": \"San Jose\",\r\n    \"state\": \"CA\",\r\n    \"zip\": \"64044\"\r\n  },\r\n  \"saveDetails\": true,\r\n  \"useSeals\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

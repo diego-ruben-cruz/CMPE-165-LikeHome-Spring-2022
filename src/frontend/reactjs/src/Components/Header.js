@@ -21,6 +21,7 @@ function Header() {
                 <li><Link to="/">Home</Link></li>
                 <li><a href="#">About Us</a></li>
                 <li>{user ? <SideDrawer/> : <LoginModal/> }</li>
+              
                 
             </ul>
             

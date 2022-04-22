@@ -1,4 +1,6 @@
-.searchbar {
+
+/**/
+.searchBar {
   position: relative;
   left: 18%;
   background: linear-gradient(#2B6FD4, #1b59b8);
@@ -9,6 +11,7 @@
   padding-top: 5px;
 }
 
+/*Displaying the the title 'Where to?'*/
 .header {
   font-size:34px;
   padding-left: 44px;
@@ -19,7 +22,7 @@
 }
 
 /*The Search Bar with the text inputs, blue background, and button*/
-.bar input {
+.searchInputs input{
   border-radius: 100px;
   height:45px;
   text-align: center;
@@ -63,6 +66,7 @@
   border-radius: 50px;
 }
 
+/* Make the button have an effect*/
 .button1:hover {
   color: #001F3F;
   background-color: #fff;

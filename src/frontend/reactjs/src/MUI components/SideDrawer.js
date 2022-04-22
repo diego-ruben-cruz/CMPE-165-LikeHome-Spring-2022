@@ -63,9 +63,11 @@ export default function SideDrawer() {
           <Avatar
           onClick={toggleDrawer(anchor, true)}
           style={{
-            height: 38,
-            width: 38,
+            height: 25,
+            width: 25,
             cursor: "pointer",
+            display:'center',
+            
           }}
           src = {user.photoURL}
           alt={user.displayName || user.email}

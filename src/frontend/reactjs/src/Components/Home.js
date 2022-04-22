@@ -33,28 +33,10 @@ const Home = () => {
           height: 500,
         }}
         >
-          <SearchBar/>
+          <SearchBar location="City, State" numberOfPeople="Number of Guests"/>
         </div>
         
-        <div>
-          <Typography>
-              Recommended Hotels:
-          </Typography>
-          <Container>
-            <Typography
-            
-            >
-                Example 1:
-            </Typography>
-           
-            <img 
-            className ="rec1"src={hotel}
-            >
-              
-            </img>
 
-          </Container>
-        </div>
 
         <Footer/>
     </>

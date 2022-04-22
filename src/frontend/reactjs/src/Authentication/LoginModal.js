@@ -9,6 +9,7 @@ import  Tabs from '@material-ui/core/Tabs';
 import  Tab from '@material-ui/core/Tab';
 import Login from"./Login";
 import Register from"./Register";
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    fontFamily: 'Montserrat',
+    fontFamily: [
+      'Monserrat',
+      'sans-serif',
+    ].join(','),
   },
 }));
 
@@ -47,16 +51,29 @@ export default function LoginModal() {
   return (
     <div>
       <Button
-    
+      variant=''
         style={{
             height: 40,
+            width:10,
             backgroundColor: "transparent",
             color: 'white',
-            fontFamily: 'Montserrat',
+            textTransform: 'none',
         }}
         onClick={handleOpen}
       >
-          Login
+          <Typography
+            style={{
+              fontFamily: [
+                'Monserrat',
+                'sans-serif',
+              ].join(','),
+              fontSize: 17,
+              textDecoration:'none',
+              
+            }}
+          >
+              Login
+          </Typography>
       </Button>
       <Modal
         aria-labelledby="transition-modal-title"
