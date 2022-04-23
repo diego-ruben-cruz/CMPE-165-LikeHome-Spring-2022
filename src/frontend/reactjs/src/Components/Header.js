@@ -33,5 +33,3 @@ const Header = () => {
 }
 
 export default Header;
-
-// {/* <li>{user ? <SideDrawer/> : <LoginModal/> }</li> */}
