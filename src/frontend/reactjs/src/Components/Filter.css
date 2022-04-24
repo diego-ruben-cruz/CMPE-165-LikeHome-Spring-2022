@@ -11,6 +11,10 @@
     padding-top: 10px;
     border-top: 40px;
   }
+
+  /* // return(
+    //     <Box bgcolor={'blue'} flex={1} p={2}>Filter</Box>
+    // ); */
   
   /* The navigation menu links */
   .sidenav a {

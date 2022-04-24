@@ -4,6 +4,8 @@ import SearchBar from './SearchBar';
 import TotalLocations from './TotalLocations';
 import Footer from './Footer';
 import Filter from './Filter';
+import SearchResults from './SearchResults';
+import Stack from '@mui/material/Stack';
 import './SearchPage.css';
 
 function area(){
@@ -15,16 +17,13 @@ function SearchPage(){
         <>
         <Header/>
         <br/>
-        <SearchBar location="City, State" numberOfPeople="Number of Guests"/>
-        <h2 id = "location" class = "location">City, State</h2> 
-        <div class ="searchPage">
-            <div class ="leftSide">
-                <Filter/>
-            </div>
-            <div class ="rightSide">
-                <TotalLocations/>
-            </div>
-        </div>
+        <br/>
+        <br/>
+        <Stack direction='row' spacing={2} justifyContent='space-between'>
+        <Filter/>
+        <SearchResults/>
+        </Stack>
+        <br/>
         <Footer/>
         </>
     );

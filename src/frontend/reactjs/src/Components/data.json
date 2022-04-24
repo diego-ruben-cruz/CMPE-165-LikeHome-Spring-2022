@@ -1,0 +1,1775 @@
+[
+    {
+        "id": 624429,
+        "name": "E-Z 8 Motel Newark",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "5555 Cedar Court",
+            "extendedAddress": "",
+            "locality": "Newark",
+            "postalCode": "94560",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 5.2,
+            "rating": "5.2",
+            "total": 616,
+            "scale": 10
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "15 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "9.1 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$52",
+                "exactCurrent": 52.49,
+                "old": "$59",
+                "fullyBundledPricePerStay": "total $58"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "HC"
+        },
+        "neighbourhood": "Newark",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-445"
+        },
+        "messaging": {},
+        "badging": {},
+        "coordinate": {
+            "lat": 37.53121,
+            "lon": -122.00633
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 16037708,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/17000000/16040000/16037800/16037708/918cd7b0_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 625831,
+        "name": "E-Z 8 Motel San Jose 1",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "1550 N 1st Street",
+            "extendedAddress": "",
+            "locality": "San Jose",
+            "postalCode": "95112",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 5,
+            "rating": "5.0",
+            "total": 383,
+            "scale": 10
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "2.2 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "4.3 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$62",
+                "exactCurrent": 62.16,
+                "old": "$70",
+                "fullyBundledPricePerStay": "total $72"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "HC"
+        },
+        "neighbourhood": "San Jose",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-445"
+        },
+        "messaging": {
+            "scarcity": "2 left on our app"
+        },
+        "badging": {},
+        "coordinate": {
+            "lat": 37.36337,
+            "lon": -121.91061
+        },
+        "roomsLeft": 2,
+        "providerType": "LOCAL",
+        "supplierHotelId": 16037680,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/17000000/16040000/16037700/16037680/d9a8b2a2_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 188793,
+        "name": "Executive Inn Hotel",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "95 Dempsey Road",
+            "extendedAddress": "",
+            "locality": "Milpitas",
+            "postalCode": "95035",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7,
+            "rating": "7.0",
+            "total": 439,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.9 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "5.1 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$68",
+                "exactCurrent": 67.5,
+                "old": "$75",
+                "fullyBundledPricePerStay": "total $77"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Milpitas",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.43474,
+            "lon": -121.88571
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 185697,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/190000/185700/185697/13c31343_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 542519,
+        "name": "The Capri Motel",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "2465 El Camino Real",
+            "extendedAddress": "",
+            "locality": "Santa Clara",
+            "postalCode": "95051",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 5,
+            "rating": "5.0",
+            "total": 84,
+            "scale": 10
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "4.4 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.5 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$68",
+                "exactCurrent": 67.5,
+                "old": "$75",
+                "fullyBundledPricePerStay": "total $75"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": true
+            },
+            "type": "HC"
+        },
+        "neighbourhood": "Santa Clara",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "coordinate": {
+            "lat": 37.352471,
+            "lon": -121.96993
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 11929349,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/12000000/11930000/11929400/11929349/766c14e1_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 111828,
+        "name": "Vagabond Inn Sunnyvale",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "816  West Ahwanee Avenue",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94085",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.8,
+            "rating": "6.8",
+            "total": 195,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "8.6 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.2 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$68",
+                "exactCurrent": 67.5,
+                "old": "$75",
+                "fullyBundledPricePerStay": "total $76"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Snail",
+        "deals": {
+            "specialDeal": {
+                "dealText": "Mobile exclusive: save 10%"
+            },
+            "priceReasoning": "DRR-444"
+        },
+        "messaging": {
+            "scarcity": "3 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.396502,
+            "lon": -122.028082
+        },
+        "roomsLeft": 3,
+        "providerType": "LOCAL",
+        "supplierHotelId": 41951,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/50000/42000/41951/e13041f9_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 111803,
+        "name": "Hotel E Real",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "3580 El Camino Real",
+            "extendedAddress": "",
+            "locality": "Santa Clara",
+            "postalCode": "95051",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.2,
+            "rating": "6.2",
+            "total": 215,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "5.8 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.8 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$68",
+                "exactCurrent": 67.83,
+                "old": "$80",
+                "fullyBundledPricePerStay": "total $84"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Santa Clara",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-445"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.352253,
+            "lon": -121.995008
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 41945,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/50000/42000/41945/5ad86917_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 2232194368,
+        "name": "Extended Studio Suites",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "2050 N 1st St",
+            "extendedAddress": "",
+            "locality": "San Jose",
+            "postalCode": "95131",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 5.8,
+            "rating": "5.8",
+            "total": 63,
+            "scale": 10
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "3.1 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.4 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$70",
+                "exactCurrent": 70,
+                "fullyBundledPricePerStay": "total $81"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "North San Jose",
+        "deals": {},
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "D13|HRW",
+        "coordinate": {
+            "lat": 37.37517,
+            "lon": -121.919181
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 69724824,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/70000000/69730000/69724900/69724824/w1059h538x1y0-754561bb_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 111493,
+        "name": "Heritage Inn",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "378 W Calaveras Blvd",
+            "extendedAddress": "",
+            "locality": "Milpitas",
+            "postalCode": "95035",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 4.6,
+            "rating": "4.6",
+            "total": 329,
+            "scale": 10
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.4 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.5 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$70",
+                "exactCurrent": 70.2,
+                "old": "$78",
+                "fullyBundledPricePerStay": "total $85"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Milpitas",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|HRW|TESCO",
+        "coordinate": {
+            "lat": 37.426561,
+            "lon": -121.912926
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 25130,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/30000/25200/25130/5e54c7ea_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 227273,
+        "name": "Granada Inn",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "2515 El Camino Real",
+            "extendedAddress": "",
+            "locality": "Santa Clara",
+            "postalCode": "95051",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.8,
+            "rating": "7.8",
+            "total": 304,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "4.5 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.5 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$72",
+                "exactCurrent": 71.99,
+                "old": "$90",
+                "fullyBundledPricePerStay": "total $80"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Santa Clara",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-445"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.352459,
+            "lon": -121.971361
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 34088,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/40000/34100/34088/77853e55_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 188319,
+        "name": "Americas Best Value Inn Milpitas Silicon Valley",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "485 S Main Street",
+            "extendedAddress": "",
+            "locality": "Milpitas",
+            "postalCode": "95035",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.2,
+            "rating": "6.2",
+            "total": 461,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.1 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.8 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$72",
+                "exactCurrent": 72,
+                "old": "$80",
+                "fullyBundledPricePerStay": "total $82"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Milpitas",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {
+            "scarcity": "1 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.423532,
+            "lon": -121.905101
+        },
+        "roomsLeft": 1,
+        "providerType": "LOCAL",
+        "supplierHotelId": 123483,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/130000/123500/123483/f704486e_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 1827672672,
+        "name": "Silicon Way Inn",
+        "starRating": 3,
+        "urls": {},
+        "address": {
+            "streetAddress": "331 E Weddell Dr",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94089",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.6,
+            "rating": "7.6",
+            "total": 24,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "8.2 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "2.7 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$75",
+                "exactCurrent": 74.67,
+                "old": "$83",
+                "fullyBundledPricePerStay": "total $95"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Morse Park",
+        "deals": {
+            "specialDeal": {
+                "dealText": "Mobile exclusive: save 10%"
+            },
+            "priceReasoning": "DRR-444"
+        },
+        "messaging": {
+            "scarcity": "4 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "D13",
+        "coordinate": {
+            "lat": 37.397546,
+            "lon": -122.019058
+        },
+        "roomsLeft": 4,
+        "providerType": "LOCAL",
+        "supplierHotelId": 57083521,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/58000000/57090000/57083600/57083521/abd44fd1_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 452453,
+        "name": "Motel 6 Sunnyvale, CA - North",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "775 N Mathilda Ave",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94086",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.8,
+            "rating": "7.8",
+            "total": 257,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "8.6 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.3 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$79",
+                "exactCurrent": 78.99,
+                "fullyBundledPricePerStay": "total $89"
+            },
+            "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": true
+            },
+            "type": "Dual"
+        },
+        "neighbourhood": "Sunnyvale",
+        "deals": {},
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.395472,
+            "lon": -122.029118
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 979322,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/980000/979400/979322/24c55d24_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 175446,
+        "name": "Hotel Vue",
+        "starRating": 3,
+        "urls": {},
+        "address": {
+            "streetAddress": "64 W El Camino Real",
+            "extendedAddress": "",
+            "locality": "Mountain View",
+            "postalCode": "94040",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.8,
+            "rating": "7.8",
+            "total": 355,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "11 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "5.9 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$80",
+                "exactCurrent": 80,
+                "fullyBundledPricePerStay": "total $88"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Cuesta Park",
+        "deals": {},
+        "messaging": {},
+        "badging": {
+            "hotelBadge": {
+                "type": "vipBasic",
+                "label": "VIP"
+            }
+        },
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.381159,
+            "lon": -122.074384
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 413992,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/420000/414000/413992/e7953d44_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 140408,
+        "name": "Days Inn by Wyndham San Jose Airport",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "270 S Abbott Ave",
+            "extendedAddress": "",
+            "locality": "Milpitas",
+            "postalCode": "95035",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.4,
+            "rating": "7.4",
+            "total": 636,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.4 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.5 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$80",
+                "exactCurrent": 80.1,
+                "old": "$89",
+                "fullyBundledPricePerStay": "total $101"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Milpitas",
+        "deals": {
+            "specialDeal": {
+                "dealText": "Mobile exclusive: save 9%"
+            },
+            "priceReasoning": "DRR-444"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|TESCO",
+        "coordinate": {
+            "lat": 37.42601,
+            "lon": -121.91201
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 50862,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/60000/50900/50862/040ca40d_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 136682,
+        "name": "Hotel Zico",
+        "starRating": 3,
+        "urls": {},
+        "address": {
+            "streetAddress": "200 E El Camino Real",
+            "extendedAddress": "",
+            "locality": "Mountain View",
+            "postalCode": "94040",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 8.6,
+            "rating": "8.6",
+            "total": 906,
+            "scale": 10,
+            "badge": "fabulous",
+            "badgeText": "Fabulous"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "10 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "5.7 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$81",
+                "exactCurrent": 80.99,
+                "old": "$90",
+                "fullyBundledPricePerStay": "total $91"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Mountain View",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|MESOTESTUS|D13|TESCO",
+        "coordinate": {
+            "lat": 37.378903,
+            "lon": -122.069316
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 413943,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/420000/414000/413943/3d074a27_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 161589,
+        "name": "Cherry Orchard Inn",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "1071 E El Camino Real",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94087",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.8,
+            "rating": "7.8",
+            "total": 231,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.2 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "4.0 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$83",
+                "exactCurrent": 83.38,
+                "old": "$109",
+                "fullyBundledPricePerStay": "total $94"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Ponderosa Park",
+        "deals": {
+            "specialDeal": {
+                "dealText": "Mobile exclusive: save 23%"
+            },
+            "priceReasoning": "DRR-444"
+        },
+        "messaging": {
+            "scarcity": "4 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|HRW|TESCO",
+        "coordinate": {
+            "lat": 37.352307,
+            "lon": -122.003242
+        },
+        "roomsLeft": 4,
+        "providerType": "LOCAL",
+        "supplierHotelId": 50836,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/60000/50900/50836/167a3f8c_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 452621,
+        "name": "Motel 6 Santa Clara, CA",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "3208 El Camino Real",
+            "extendedAddress": "",
+            "locality": "Santa Clara",
+            "postalCode": "95051",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.6,
+            "rating": "6.6",
+            "total": 189,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "5.2 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.6 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$84",
+                "exactCurrent": 83.99,
+                "fullyBundledPricePerStay": "total $94"
+            },
+            "features": {
+                "freeCancellation": true,
+                "paymentPreference": true,
+                "noCCRequired": false
+            },
+            "type": "Dual"
+        },
+        "neighbourhood": "Santa Clara",
+        "deals": {},
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.352119,
+            "lon": -121.984761
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 996298,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/1000000/996300/996298/8d112511_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 461287,
+        "name": "Motel 6 Fremont, CA - South",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "46101 Research Ave",
+            "extendedAddress": "",
+            "locality": "Fremont",
+            "postalCode": "94539",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.8,
+            "rating": "6.8",
+            "total": 196,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "11 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "6.9 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$85",
+                "exactCurrent": 84.99,
+                "fullyBundledPricePerStay": "total $94"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Fremont",
+        "deals": {},
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.496532,
+            "lon": -121.925985
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 982537,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/990000/982600/982537/3e443c03_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 140771,
+        "name": "Quality Inn & Suites Silicon Valley",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "2930 El Camino Real",
+            "extendedAddress": "",
+            "locality": "Santa Clara",
+            "postalCode": "95051",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.6,
+            "rating": "6.6",
+            "total": 279,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "5.0 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.6 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$85",
+                "exactCurrent": 84.99,
+                "fullyBundledPricePerStay": "total $95"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Santa Clara",
+        "deals": {},
+        "messaging": {
+            "scarcity": "4 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|TESCO",
+        "coordinate": {
+            "lat": 37.352275,
+            "lon": -121.979748
+        },
+        "roomsLeft": 4,
+        "providerType": "LOCAL",
+        "supplierHotelId": 26408,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/30000/26500/26408/930abc18_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 646023,
+        "name": "Budget Motel",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "1028 W. El Camino Real",
+            "extendedAddress": "",
+            "locality": "Mountain View",
+            "postalCode": "94040",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 6.2,
+            "rating": "6.2",
+            "total": 8,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "11 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "6.5 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$85",
+                "exactCurrent": 85,
+                "fullyBundledPricePerStay": "total $99"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "HC"
+        },
+        "neighbourhood": "Old Mountain View",
+        "deals": {},
+        "messaging": {
+            "scarcity": "2 left on our app"
+        },
+        "badging": {},
+        "coordinate": {
+            "lat": 37.387445,
+            "lon": -122.086206
+        },
+        "roomsLeft": 2,
+        "providerType": "LOCAL",
+        "supplierHotelId": 16657188,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/17000000/16660000/16657200/16657188/7127d1bd_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 170829,
+        "name": "Good Nite Inn Fremont",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "4135 Cushing Pkwy",
+            "extendedAddress": "",
+            "locality": "Fremont",
+            "postalCode": "94538",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 8,
+            "rating": "8.0",
+            "total": 700,
+            "scale": 10,
+            "badge": "very-good",
+            "badgeText": "Very Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "11 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "6.2 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$86",
+                "exactCurrent": 86.49,
+                "old": "$93",
+                "fullyBundledPricePerStay": "total $95"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Fremont",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.491473,
+            "lon": -121.949898
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 66997,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/70000/67000/66997/0a823881_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 344007,
+        "name": "Alura Inn",
+        "starRating": 2,
+        "urls": {},
+        "address": {
+            "streetAddress": "1378 Oakland Rd",
+            "extendedAddress": "",
+            "locality": "San Jose",
+            "postalCode": "95112",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.4,
+            "rating": "7.4",
+            "total": 603,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "2.5 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "4.7 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$87",
+                "exactCurrent": 87.3,
+                "old": "$97",
+                "fullyBundledPricePerStay": "total $101"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Berryessa",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {
+            "scarcity": "2 left on our app"
+        },
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.3711,
+            "lon": -121.89334
+        },
+        "roomsLeft": 2,
+        "providerType": "LOCAL",
+        "supplierHotelId": 1334278,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/2000000/1340000/1334300/1334278/91e9ff5f_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 113518,
+        "name": "The Domain Hotel",
+        "starRating": 4,
+        "urls": {},
+        "address": {
+            "streetAddress": "1085 E El Camino Real",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94087",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.8,
+            "rating": "7.8",
+            "total": 611,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "6.2 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.9 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$88",
+                "exactCurrent": 88.01,
+                "old": "$98",
+                "fullyBundledPricePerStay": "total $99"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Ponderosa Park",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|priceRangeCA|D13|TESCO",
+        "coordinate": {
+            "lat": 37.35233,
+            "lon": -122.001959
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 21433,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/30000/21500/21433/2e56a61f_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 144762,
+        "name": "Days Inn & Suites by Wyndham Sunnyvale",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "504 Ross Drive",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94089",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.2,
+            "rating": "7.2",
+            "total": 357,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "8.8 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.2 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$88",
+                "exactCurrent": 88.11,
+                "old": "$99",
+                "fullyBundledPricePerStay": "total $99"
+            },
+            "features": {
+                "freeCancellation": false,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Sunnyvale",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-445"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|TESCO",
+        "coordinate": {
+            "lat": 37.402288,
+            "lon": -122.027482
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 22992,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/30000/23000/22992/cb7988cb_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    },
+    {
+        "id": 130315,
+        "name": "Travel Inn",
+        "starRating": 2.5,
+        "urls": {},
+        "address": {
+            "streetAddress": "590 N Mathilda Ave",
+            "extendedAddress": "",
+            "locality": "Sunnyvale",
+            "postalCode": "94086",
+            "region": "CA",
+            "countryName": "United States",
+            "countryCode": "us",
+            "obfuscate": false
+        },
+        "welcomeRewards": {
+            "collect": true
+        },
+        "guestReviews": {
+            "unformattedRating": 7.6,
+            "rating": "7.6",
+            "total": 272,
+            "scale": 10,
+            "badge": "good",
+            "badgeText": "Good"
+        },
+        "landmarks": [
+            {
+                "label": "City center",
+                "distance": "8.5 miles"
+            },
+            {
+                "label": "Levi's Stadium",
+                "distance": "3.4 miles"
+            }
+        ],
+        "geoBullets": [],
+        "ratePlan": {
+            "price": {
+                "current": "$88",
+                "exactCurrent": 88.2,
+                "old": "$98",
+                "fullyBundledPricePerStay": "total $99"
+            },
+            "features": {
+                "freeCancellation": true,
+                "paymentPreference": false,
+                "noCCRequired": false
+            },
+            "type": "EC"
+        },
+        "neighbourhood": "Sunnyvale",
+        "deals": {
+            "secretPrice": {
+                "dealText": "Save more with Secret Prices"
+            },
+            "priceReasoning": "DRR-443"
+        },
+        "messaging": {},
+        "badging": {},
+        "pimmsAttributes": "DoubleStamps|D13|TESCO",
+        "coordinate": {
+            "lat": 37.39139,
+            "lon": -122.029992
+        },
+        "providerType": "LOCAL",
+        "supplierHotelId": 17553,
+        "isAlternative": false,
+        "optimizedThumbUrls": {
+            "srpDesktop": "https://exp.cdn-hotels.com/hotels/1000000/20000/17600/17553/27993878_z.jpg?impolicy=fcrop&w=250&h=140&q=high"
+        }
+    }
+]

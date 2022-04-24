@@ -13,3 +13,26 @@
     width: 50;
     height: 50;
 }
+
+
+
+/* return (
+    <>
+        <Header/>
+        <Banner/>
+        <RecTable/>
+        <h1 className='home'>A Home Far Away From Home</h1>
+        <div 
+        className="h1"
+        style={{
+          height: 500,
+        }}
+        >
+          <SearchBar location="City, State" numberOfPeople="Number of Guests"/>
+        </div>
+        <Footer/>
+    </>
+  )
+}
+
+export default Home */

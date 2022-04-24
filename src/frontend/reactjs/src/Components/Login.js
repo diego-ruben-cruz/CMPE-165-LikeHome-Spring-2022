@@ -1,48 +1,119 @@
-import './LoginSignUp.css';
-import React, { Component } from "react";
-import Header from './Header';
+import React from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import Footer from './Footer';
-//import { render } from 'react-dom';
+import Header from './Header';
+import Container from './Container';
 
-function Login() {
-
-    return(    
-        <login>
-           <Header>
-            </Header> 
-        <div className='SignUp'>
-            <h1>Login</h1>
-            <form>
-                <div className='SignUp-Content'>
-                    <label className = "LabelHeader2"> Email </label>
-                    <input class = "Signup-input" type= "text" placeholder='Enter your email'/>
-                </div>
-
-
-                <div className='SignUp-Content'>
-                    <label className = "LabelHeader3"> Password </label>
-                    <input class = "Signup-input" type= "password" placeholder='Enter a password'/>
-                </div>
-                    
-                <div> 
-                    <input className='Button' type="submit" value="Login"/>
-                </div>
-
-                <div class ="Signup_link">
-                    Don't have an account? <a href="/signup"> Sign Up </a>
-                </div>
-
-                <div class ="pass_forgot">
-                    <a href="#"> Forget your Password? </a>
-                </div>
-                
-            </form>
-
-        </div>
-        <Footer>
-            </Footer> 
-        </login>
-    );
-}
+const Login = () => {
+  return (
+      <>
+      <br/>
+      <br/>
+      <Header/>
+    <Box bgcolor={'alternate.main'}>
+      <Container maxWidth={800}>
+        <Box marginBottom={4}>
+          <Typography
+            variant="h4"
+            sx={{
+              fontWeight: 700,
+            }}
+          >
+            Welcome back
+          </Typography>
+          <Typography color="text.secondary">
+            Login to manage your account.
+          </Typography>
+        </Box>
+        <Card sx={{ p: { xs: 4, md: 6 } }}>
+          <form>
+            <Grid container spacing={4}>
+              <Grid item xs={12}>
+                <Typography variant={'subtitle2'} sx={{ marginBottom: 2 }}>
+                  Enter your email
+                </Typography>
+                <TextField
+                  label="Email *"
+                  variant="outlined"
+                  name={'email'}
+                  fullWidth
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Box
+                  display="flex"
+                  flexDirection={{ xs: 'column', sm: 'row' }}
+                  alignItems={{ xs: 'stretched', sm: 'center' }}
+                  justifyContent={'space-between'}
+                  width={1}
+                  marginBottom={2}
+                >
+                  <Box marginBottom={{ xs: 1, sm: 0 }}>
+                    <Typography variant={'subtitle2'}>
+                      Enter your password
+                    </Typography>
+                  </Box>
+                  <Typography variant={'subtitle2'}>
+                    <Link
+                      component={'a'}
+                      color={'primary'}
+                      href={'#'}
+                      underline={'none'}
+                    >
+                      Forgot your password?
+                    </Link>
+                  </Typography>
+                </Box>
+                <TextField
+                  label="Password *"
+                  variant="outlined"
+                  name={'password'}
+                  type={'password'}
+                  fullWidth
+                />
+              </Grid>
+              <Grid item container xs={12}>
+                <Box
+                  display="flex"
+                  flexDirection={{ xs: 'column', sm: 'row' }}
+                  alignItems={{ xs: 'stretched', sm: 'center' }}
+                  justifyContent={'space-between'}
+                  width={1}
+                  maxWidth={600}
+                  margin={'0 auto'}
+                >
+                  <Box marginBottom={{ xs: 1, sm: 0 }}>
+                    <Typography variant={'subtitle2'}>
+                      Don't have an account yet?{' '}
+                      <Link
+                        component={'a'}
+                        color={'primary'}
+                        href={'#'}
+                        underline={'none'}
+                      >
+                        Sign up here.
+                      </Link>
+                    </Typography>
+                  </Box>
+                  <Button size={'large'} variant={'contained'} type={'submit'}>
+                    Login
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
+          </form>
+        </Card>
+      </Container>
+    </Box>
+    <Footer/>
+    </>
+  );
+};
 
 export default Login;

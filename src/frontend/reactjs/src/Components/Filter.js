@@ -1,74 +1,143 @@
 import React, { Component } from "react";
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import SanitizerIcon from '@mui/icons-material/Sanitizer';
+import AccessibilityIcon from '@mui/icons-material/Accessibility';
+import HotelIcon from '@mui/icons-material/Hotel';
 import './Filter.css';
 
-function Filter(){
-    return(
-        <div class="sidenav">
-            <h3>Filters</h3><br/>
-            <h4>Price</h4>
-            <form>
-                <input type = "radio" id ="" value = ""></input>
-                <label>$50 - $100</label><br/>
-                <input type = "radio" id =""></input>
-                <label>$100 - $200</label><br/>
-                <input type = "radio" id =""></input>
-                <label>$200 - $300</label><br/>
-                <input type = "radio" id =""></input>
-                <label>$300 - $400</label><br/>
-                <input type = "radio" id =""></input>
-                <label>$400 - $500</label><br/>
-            </form><br/>
-            <h4>Rooms</h4>
-            <form>
-                <input type = "radio" id ="" value = ""></input>
-                <label>1</label><br/>
-                <input type = "radio" id =""></input>
-                <label>2</label><br/>
-                <input type = "radio" id =""></input>
-                <label>3</label><br/>
-                <input type = "radio" id =""></input>
-                <label>4</label><br/>
-                <input type = "radio" id =""></input>
-                <label>5</label><br/>
-            </form><br/>
-            <h4>Amenities</h4>
-            <form>
-                <input type = "checkbox" id ="" value = ""></input>
-                <label>Wifi</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>Swimming Pool</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>Free Breakfast</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>Pet Friendly</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>Valet</label><br/>
-            </form><br/>
-            <h4>Ratings</h4>
-            <form>
-                <input type = "checkbox" id ="" value = ""></input>
-                <label>10</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>9</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>8</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>7</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>6</label>
-                <input type = "checkbox" id ="" value = ""></input>
-                <label>5</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>4</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>3</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>2</label><br/>
-                <input type = "checkbox" id =""></input>
-                <label>1</label><br/>
-            </form><br/>
-        </div>
+export default function Filter() {
+    const [open, setOpen] = React.useState(true);
+    const [open2, setOpen2] = React.useState(true);
+    const [open3, setOpen3] = React.useState(true);
+    const [open4, setOpen4] = React.useState(true);
+    const [open5, setOpen5] = React.useState(true);
 
-    );
+    const handleClick = () => {
+        setOpen(!open);
+      };
+    
+      const handleClick2 = () => {
+        setOpen2(!open2);
+      };
+      
+      const handleClick3 = () => {
+        setOpen3(!open3);
+      };
+    
+      const handleClick4 = () => {
+        setOpen4(!open4);
+      };
+
+      const handleClick5 = () => {
+        setOpen5(!open5);
+      };
+    
+      
+      return (
+        <List
+          sx={{ width: '100%', maxWidth: 360 }}
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          subheader={
+            <ListSubheader component="div" id="nested-list-subheader" color="white">
+              Filter
+            </ListSubheader>
+          }
+        >
+          <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <HotelIcon />
+            </ListItemIcon>
+            <ListItemText primary="Name" />
+            {open ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Will do later" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          <ListItemButton onClick={handleClick2}>
+            <ListItemIcon>
+              <StarIcon />
+            </ListItemIcon>
+            <ListItemText primary="Star Rating" />
+            {open2 ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open2} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Starred" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          <ListItemButton onClick={handleClick3}>
+            <ListItemIcon>
+              <AttachMoneyIcon />
+            </ListItemIcon>
+            <ListItemText primary="Price" />
+            {open3 ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open3} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Starred" />
+              </ListItemButton>
+            </List>
+          </Collapse>  <ListItemButton onClick={handleClick4}>
+            <ListItemIcon>
+              <SanitizerIcon />
+            </ListItemIcon>
+            <ListItemText primary="Amenities" />
+            {open4 ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open4} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Starred" />
+              </ListItemButton>
+            </List>
+          </Collapse>  <ListItemButton onClick={handleClick5}>
+            <ListItemIcon>
+              <AccessibilityIcon />
+            </ListItemIcon>
+            <ListItemText primary="Accessibility" />
+            {open5 ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open5} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Starred" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+        </List>
+      );
 }
-export default Filter;
