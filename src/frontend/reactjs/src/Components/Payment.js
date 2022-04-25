@@ -18,7 +18,7 @@ import * as api from '../api';
 const Payment = ({handleClose}) => {
 
   //reservation portion
-
+  //using a dummy for now.
 
   //Payment portion
   const [email, setEmail] = useState("");
