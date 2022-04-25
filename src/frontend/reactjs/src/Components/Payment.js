@@ -17,31 +17,53 @@ import * as api from '../api';
 
 const Payment = ({handleClose}) => {
 
+  //reservation portion
+
+
+  //Payment portion
   const [email, setEmail] = useState("");
-  const [ccv, setCcv] = useState("");
+  const [cvc, setCvc] = useState("");
   const [country, setCountry] = useState("");
   const [name, setFullName] = useState("");
   const [expiration, setExp] = useState("");
   const [number, setNumber] = useState(""); //credit card number
-  
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
+  const [zip, setZip] = useState("");
+  const [cardname, setCardName] = useState("");
+
   
   //const [name, setName] = useState("");
   
 
   const handleSubmit = async () => {
+
     try {
+      const reservationResp = await api.reservation.create({
+        
+        accountId: email,
+        // hotelId: "624429",
+        price: "690",
+        checkIn: "04-23-19",
+        checkOut: "04-24-19",
+        guests: "2"
+
+      }) 
+
       const paymentResp = await api.payment.pay({
 
         //Dummy for now
-        accoundId: email,
-        reservationId: '08592959-0906-4086-a50c-05dc3ac5c8ec',
+        accountId: email,
+        reservationId: reservationResp.id,
         paymentDetails: {
-            ccv: ccv,
+            cvc: cvc,
             exp: expiration,
             number: number,
             country: country,
             fullname: name,
-            
+            city: city,
+            address: address,
+            zip: zip,
 
            },
         saveDetails: true
@@ -82,8 +104,11 @@ const Payment = ({handleClose}) => {
                 >
                   Enter your first name
                 </Typography>
+
+
+
                 <TextField
-                  label="First name *"
+                  label="Full name *"
                   variant="outlined"
                   name={'fullName'}
                   value = {name}
@@ -91,6 +116,9 @@ const Payment = ({handleClose}) => {
                   fullWidth
                 />
               </Grid>
+
+
+
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant={'subtitle2'}
@@ -108,6 +136,9 @@ const Payment = ({handleClose}) => {
                   fullWidth
                 />
               </Grid>
+
+
+
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant={'subtitle2'}
@@ -125,6 +156,9 @@ const Payment = ({handleClose}) => {
                   fullWidth
                 />
               </Grid>
+
+
+
               <Grid item xs={12} sm={6}>
                 <Typography
                   variant={'subtitle2'}
@@ -137,9 +171,14 @@ const Payment = ({handleClose}) => {
                   label="City *"
                   variant="outlined"
                   name={'city'}
+                  value ={city}
+                  onChange ={(e) => setCity(e.target.value)}
                   fullWidth
                 />
               </Grid>
+
+
+
               <Grid item xs={12}>
                 <Typography
                   variant={'subtitle2'}
@@ -152,12 +191,16 @@ const Payment = ({handleClose}) => {
                   label="Address *"
                   variant="outlined"
                   name={'address'}
+                  value ={address}
+                  onChange ={(e) => setAddress(e.target.value)}
                   fullWidth
                 />
               </Grid>
               <Grid item container xs={12}>
               </Grid>
             </Grid>
+
+
               <Grid container spacing={4}>
                 <Grid item xs={12}>
                   <Typography
@@ -176,6 +219,9 @@ const Payment = ({handleClose}) => {
                     fullWidth
                   />
                 </Grid>
+
+
+
                 <Grid item xs={12}>
                   <Typography
                     variant={'subtitle2'}
@@ -188,9 +234,15 @@ const Payment = ({handleClose}) => {
                     label="Name *"
                     variant="outlined"
                     name={'name'}
+                    value ={cardname}
+                    onChange ={(e) => setCardName(e.target.value)}
                     fullWidth
                   />
                 </Grid>
+
+
+
+
                 <Grid item xs={12} sm={4}>
                   <Typography
                     variant={'subtitle2'}
@@ -208,6 +260,9 @@ const Payment = ({handleClose}) => {
                     fullWidth
                   />
                 </Grid>
+
+
+
                 <Grid item xs={12} sm={4}>
                   <Typography
                     variant={'subtitle2'}
@@ -220,26 +275,32 @@ const Payment = ({handleClose}) => {
                     label="Zip code *"
                     variant="outlined"
                     name={'zip'}
+                    value ={zip}
+                    onChange ={(e) => setZip(e.target.value)}
                     fullWidth
                   />
                 </Grid>
+
+
                 <Grid item xs={12} sm={4}>
                   <Typography
                     variant={'subtitle2'}
                     sx={{ marginBottom: 2 }}
                     fontWeight={700}
                   >
-                    CVV
+                    CVC
                   </Typography>
                   <TextField
-                    label="Card CVV *"
+                    label="Card CVC *"
                     variant="outlined"
-                    name={'cvv'}
-                    value = {ccv}
-                  onChange={(e) => setCcv(e.target.value)}
+                    name={'cvc'}
+                    value = {cvc}
+                  onChange={(e) => setCvc(e.target.value)}
                     fullWidth
                   />
                 </Grid>
+
+
                 <Grid item xs={12}>
                   <Divider />
                 </Grid>
@@ -255,7 +316,7 @@ const Payment = ({handleClose}) => {
                     <Button
                       size={'large'}
                       variant="contained"
-                      type={'submit'}
+                      //type={'submit'}
                       onClick = {handleSubmit}
                     >
                       Submit
