@@ -1,5 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
+const API_KEYS = ['748ac67f3cmshf3e99f25f444fd0p1d75ebjsn397e2d620ed4', '0037920bb1msh7e448a635989d78p138d01jsn4b7e7f35cba9', '9e25cd5a46msh60f9cd26501badcp11a6a7jsn02657b7b4fc0'];
+let k = 0;
+
 export const search = async (location: string) => {
 
   // call hotels4 locations/v2/search endpoint
@@ -8,7 +11,7 @@ export const search = async (location: string) => {
     url: 'https://hotels4.p.rapidapi.com/locations/v2/search',
     headers: {
       'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-      'X-RapidAPI-Key': '748ac67f3cmshf3e99f25f444fd0p1d75ebjsn397e2d620ed4'
+      'X-RapidAPI-Key': API_KEYS[k],
     },
     params: {
       locale: 'en_US',
@@ -17,7 +20,11 @@ export const search = async (location: string) => {
     }
   }
 
-  const resp: AxiosResponse = await axios.request(options);
+  let resp: AxiosResponse = await axios.request(options);
+  if (resp.status == 429) {
+    k++;
+    resp = await axios.request(options);
+  }
   return resp;
 }
 
@@ -78,11 +85,15 @@ export const list = async (params: listParams) => {
     },
     headers: {
       'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-      'X-RapidAPI-Key': '748ac67f3cmshf3e99f25f444fd0p1d75ebjsn397e2d620ed4'
+      'X-RapidAPI-Key': API_KEYS[k]
     }
   };
 
-  const resp: AxiosResponse = await axios.request(options);
+  let resp: AxiosResponse = await axios.request(options);
+  if (resp.status == 429) {
+    k++;
+    resp = await axios.request(options);
+  }
   return resp;
 }
 
@@ -97,10 +108,14 @@ export const details = async (id: string) => {
     },
     headers: {
       'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-      'X-RapidAPI-Key': '748ac67f3cmshf3e99f25f444fd0p1d75ebjsn397e2d620ed4'
+      'X-RapidAPI-Key': API_KEYS[k]
     }
   };
 
-  const resp: AxiosResponse = await axios.request(options);
+  let resp: AxiosResponse = await axios.request(options);
+  if (resp.status == 429) {
+    k++;
+    resp = await axios.request(options);
+  }
   return resp;
 }

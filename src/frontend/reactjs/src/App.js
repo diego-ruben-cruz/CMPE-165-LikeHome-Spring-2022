@@ -1,4 +1,14 @@
+import './App.css';
 import React, { Component } from 'react';
+<<<<<<< HEAD
+import SignUp from "./Components/SignUp";
+import Login from "./Components/Login";
+//import HomePage from "./Components/Homepage";
+
+
+function App() {
+  return(
+=======
 import Home from './Components/Home';
 import SearchPage from './Components/SearchPage';
 import SignUp from "./Components/SignUp";
@@ -30,10 +40,16 @@ function App() {
     </Router>
     //,
     //<Footer/>
+>>>>>>> 109a8c45594a2324cdb7aa428ccd79cdf4e5e624
     //<HomePage />
-    //<SignUp />
-    //<Login />
-  );
+   <SignUp />
+
+   // <Login />
+  
+      );
+
+  
+
 }
 
 export default App;
