@@ -5,26 +5,34 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import SanitizerIcon from '@mui/icons-material/Sanitizer';
-import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import HotelIcon from '@mui/icons-material/Hotel';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import TextField from '@mui/material/TextField';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControl from '@mui/material/FormControl';
 import './Filter.css';
 
+
 export default function Filter() {
-    const [open, setOpen] = React.useState(true);
+    {/*Opens/Closes the category menu*/}
+    const [open1, setOpen1] = React.useState(true);
     const [open2, setOpen2] = React.useState(true);
     const [open3, setOpen3] = React.useState(true);
-    const [open4, setOpen4] = React.useState(true);
-    const [open5, setOpen5] = React.useState(true);
+
+    {/*Sets the*/}
+    const [hotelName, setHotelName] = React.useState();
+    const [stars,setStars] = React.useState();
+    const [sortProce, setSortPrice] = React.useState();
+    
 
     const handleClick = () => {
-        setOpen(!open);
+        setOpen1(!open1);
       };
     
       const handleClick2 = () => {
@@ -34,44 +42,50 @@ export default function Filter() {
       const handleClick3 = () => {
         setOpen3(!open3);
       };
-    
-      const handleClick4 = () => {
-        setOpen4(!open4);
+      
+      const setFilter1 = () => {
+        
       };
 
-      const handleClick5 = () => {
-        setOpen5(!open5);
-      };
+      const setFilter2 = () => {
+
+      }
+
+      const setFilter3 = () => {
+
+      }
     
       
       return (
         <List
-          sx={{ width: '100%', maxWidth: 360 }}
+          sx={{ width: '150px' }}
           component="nav"
-          aria-labelledby="nested-list-subheader"
           subheader={
-            <ListSubheader component="div" id="nested-list-subheader" color="white">
+            <ListSubheader component="div" id="filterList" color="white">
               Filter
             </ListSubheader>
           }
         >
+          {/*Lists the location*/}
           <ListItemButton onClick={handleClick}>
             <ListItemIcon>
               <HotelIcon />
             </ListItemIcon>
             <ListItemText primary="Name" />
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {open1 ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open1} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }}>
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
-                <ListItemText primary="Will do later" />
+                <TextField id="hotelName" label="Hotel Name" variant="standard" />
               </ListItemButton>
             </List>
           </Collapse>
+          
+          {/*Dropdown menu for Ratings*/}
           <ListItemButton onClick={handleClick2}>
             <ListItemIcon>
               <StarIcon />
@@ -82,13 +96,29 @@ export default function Filter() {
           <Collapse in={open2} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary="Starred" />
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="star-buttons-group-label"
+                    name="stars-group"
+                    onClick={setFilter2}
+                  >
+                    <FormControlLabel value={10} control={<Radio />} label="10 Stars" />
+                    <FormControlLabel value={9} control={<Radio />} label="9 Stars" />
+                    <FormControlLabel value={8} control={<Radio />} label="8 Stars" />
+                    <FormControlLabel value={7} control={<Radio />} label="7 Stars" />
+                    <FormControlLabel value={6} control={<Radio />} label="6 Stars" />
+                    <FormControlLabel value={5} control={<Radio />} label="5 Stars" />
+                    <FormControlLabel value={4} control={<Radio />} label="4 Stars" />
+                    <FormControlLabel value={3} control={<Radio />} label="3 Stars" />
+                    <FormControlLabel value={2} control={<Radio />} label="2 Stars" />
+                    <FormControlLabel value={1} control={<Radio />} label="1 Star" />
+                  </RadioGroup>
+                </FormControl>
               </ListItemButton>
             </List>
           </Collapse>
+          
+          {/*Dropdown menu for Prices*/}
           <ListItemButton onClick={handleClick3}>
             <ListItemIcon>
               <AttachMoneyIcon />
@@ -99,45 +129,30 @@ export default function Filter() {
           <Collapse in={open3} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary="Starred" />
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="price-buttons-group-label"
+                    name="price-group"
+                    onClick={setFilter3}
+                  >
+                    <FormControlLabel value=">50" control={<Radio />} label="Less than $50" />
+                    <FormControlLabel value="50-60" control={<Radio />} label="$50 - $60" />
+                    <FormControlLabel value="60-70" control={<Radio />} label="$60 - $70" />
+                    <FormControlLabel value="70-80" control={<Radio />} label="$70 - $80" />
+                    <FormControlLabel value="80-90" control={<Radio />} label="$80 - $90" />
+                    <FormControlLabel value="90-100" control={<Radio />} label="$90 - $100" />
+                    <FormControlLabel value="100-200" control={<Radio />} label="$100 - $200" />
+                    <FormControlLabel value="200-300" control={<Radio />} label="$200 - $300" />
+                    <FormControlLabel value="300-400" control={<Radio />} label="$300 - $400" />
+                    <FormControlLabel value="400-500" control={<Radio />} label="$400 - $500" />
+                    <FormControlLabel value="500" control={<Radio />} label="More Than $500" />
+                  </RadioGroup>
+                </FormControl>
+              
               </ListItemButton>
             </List>
-          </Collapse>  <ListItemButton onClick={handleClick4}>
-            <ListItemIcon>
-              <SanitizerIcon />
-            </ListItemIcon>
-            <ListItemText primary="Amenities" />
-            {open4 ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={open4} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary="Starred" />
-              </ListItemButton>
-            </List>
-          </Collapse>  <ListItemButton onClick={handleClick5}>
-            <ListItemIcon>
-              <AccessibilityIcon />
-            </ListItemIcon>
-            <ListItemText primary="Accessibility" />
-            {open5 ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={open5} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary="Starred" />
-              </ListItemButton>
-            </List>
-          </Collapse>
+          </Collapse>  
+          
         </List>
       );
 }
