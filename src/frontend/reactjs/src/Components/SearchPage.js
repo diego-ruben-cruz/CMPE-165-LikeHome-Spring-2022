@@ -7,11 +7,7 @@ import Filter from './Filter';
 import SearchResults from './SearchResults';
 import Stack from '@mui/material/Stack';
 import './SearchPage.css';
-
-function area(){
-    var location = document.getElementsByClassName();
-}
-
+import Sort from './Sort';
 function SearchPage(){ 
     return (
         <>
@@ -21,6 +17,7 @@ function SearchPage(){
         <br/>
         <Stack direction='row' spacing={2} justifyContent='space-between'>
         <Filter/>
+        <Sort/>
         <SearchResults/>
         </Stack>
         <br/>

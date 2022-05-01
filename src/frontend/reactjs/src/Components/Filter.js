@@ -25,12 +25,13 @@ export default function Filter() {
     const [open2, setOpen2] = React.useState(true);
     const [open3, setOpen3] = React.useState(true);
 
-    {/*Sets the*/}
+    {/*Sets the filter for each object*/}
     const [hotelName, setHotelName] = React.useState();
     const [stars,setStars] = React.useState();
-    const [sortProce, setSortPrice] = React.useState();
+    const [sortPrice, setSortPrice] = React.useState();
     
 
+    {/*Sets the filter for each object*/}
     const handleClick = () => {
         setOpen1(!open1);
       };
@@ -43,17 +44,27 @@ export default function Filter() {
         setOpen3(!open3);
       };
       
-      const setFilter1 = () => {
+      {/*Changes based on event*/}
+      const setFilter1 = (event) => {
         
       };
 
-      const setFilter2 = () => {
+      const setFilter2 = (event) => {
 
-      }
+      };
 
-      const setFilter3 = () => {
+      const setFilter3 = (event) => {
+          if(sortPrice.equals("50<")){
 
-      }
+          }
+          else if(sortPrice.equals(">500")){
+
+          }
+          else{
+            const values = sortPrice.split("-",2);
+
+          }
+      };
     
       
       return (
@@ -80,7 +91,12 @@ export default function Filter() {
                 <ListItemIcon>
                   <StarBorder />
                 </ListItemIcon>
-                <TextField id="hotelName" label="Hotel Name" variant="standard" />
+                <TextField 
+                id="hotelName" 
+                label="Hotel Name" 
+                variant="standard" 
+                onChange={setFilter1}
+                />
               </ListItemButton>
             </List>
           </Collapse>
@@ -100,7 +116,8 @@ export default function Filter() {
                   <RadioGroup
                     aria-labelledby="star-buttons-group-label"
                     name="stars-group"
-                    onClick={setFilter2}
+                    value = {stars}
+                    onChange={setFilter2}
                   >
                     <FormControlLabel value={10} control={<Radio />} label="10 Stars" />
                     <FormControlLabel value={9} control={<Radio />} label="9 Stars" />
@@ -133,9 +150,10 @@ export default function Filter() {
                   <RadioGroup
                     aria-labelledby="price-buttons-group-label"
                     name="price-group"
-                    onClick={setFilter3}
+                    value = {sortPrice}
+                    onChange={setFilter3}
                   >
-                    <FormControlLabel value=">50" control={<Radio />} label="Less than $50" />
+                    <FormControlLabel value="50<" control={<Radio />} label="Less than $50" />
                     <FormControlLabel value="50-60" control={<Radio />} label="$50 - $60" />
                     <FormControlLabel value="60-70" control={<Radio />} label="$60 - $70" />
                     <FormControlLabel value="70-80" control={<Radio />} label="$70 - $80" />
@@ -145,7 +163,7 @@ export default function Filter() {
                     <FormControlLabel value="200-300" control={<Radio />} label="$200 - $300" />
                     <FormControlLabel value="300-400" control={<Radio />} label="$300 - $400" />
                     <FormControlLabel value="400-500" control={<Radio />} label="$400 - $500" />
-                    <FormControlLabel value="500" control={<Radio />} label="More Than $500" />
+                    <FormControlLabel value=">500" control={<Radio />} label="More Than $500" />
                   </RadioGroup>
                 </FormControl>
               
