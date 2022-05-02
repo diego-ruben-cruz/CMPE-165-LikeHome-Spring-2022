@@ -19,6 +19,9 @@ const Alert = () => {
       open={alert.open}
       autoHideDuration={3000}
       onClose={handleCloseAlert}
+      style={{
+        height:220
+      }}
     >
       <MuiAlert
         onClose={handleCloseAlert}

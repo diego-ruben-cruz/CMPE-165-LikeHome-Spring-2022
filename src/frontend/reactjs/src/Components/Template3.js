@@ -13,6 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Button from '@mui/material/Button';
 import { alpha } from '@mui/material/styles';
+import window from './window.svg'
 
 const mock = [
   {
@@ -68,6 +69,12 @@ const Template3 = () => {
   });
 
   return (
+    <>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <Box>
       <Grid container spacing={4} direction={isMd ? 'row' : 'column-reverse'}>
         <Grid item xs={12} md={6} data-aos={isMd ? 'fade-right' : 'fade-up'}>
@@ -132,18 +139,19 @@ const Template3 = () => {
             display: { xs: 'none', md: 'flex' },
           }}
         >
-          <Box component={Card} boxShadow={4} height={1} width={1}>
+          <Box height={1} width={1}>
             <Box
               component={CardMedia}
               height={1}
               width={1}
               minHeight={300}
-              image="https://assets.maccarianagency.com/backgrounds/img4.jpg"
+              image={window}
             />
           </Box>
         </Grid>
       </Grid>
     </Box>
+    </>
   );
 };
 

@@ -3,9 +3,17 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import town from './town.svg';
 
 const TravelingText = () => {
   return (
+    <>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <Box position={'flex'}>
       <Grid container>
         <Grid item xs={12} sm={6} data-aos={'fade-up'}>
@@ -38,8 +46,31 @@ const TravelingText = () => {
             Discover the offer
           </Box>
         </Grid>
+        <Grid
+          item
+          container
+          justifyContent="center"
+          alignItems="center"
+          xs={12}
+          md={6}
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            paddingLeft: '60px',
+          }}
+        >
+          <Box height={1} width={1}>
+            <Box
+              component={CardMedia}
+              height={1}
+              width={1}
+              minHeight={300}
+              image={town}
+            />
+          </Box>
+        </Grid>
       </Grid>
     </Box>
+    </>
   );
 };
 

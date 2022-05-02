@@ -1,3 +1,14 @@
-.location {
-    text-align: center;
-}
+/* <div class = "searchBar">
+            <div class = "header">
+                <h6 class ="top">Where To?</h6>
+            </div>
+           <div class = "searchInputs">
+                <form action="/searchpage" method = "get" value="none">
+                    <input id="input" type = "text" class = "text1"/>
+                    <input type = "date" class = "text2" name = "check-in"/>
+                    <input type = "date" class = "text3"  name = "check-out"/>
+                    <input type = "number" class = "text4"  name = "guests"/>
+                    <button id="button" type = "submit" value ="search" class="button1" onclick="save_data()">Search</button>
+               </form>
+           </div>
+        </div> */

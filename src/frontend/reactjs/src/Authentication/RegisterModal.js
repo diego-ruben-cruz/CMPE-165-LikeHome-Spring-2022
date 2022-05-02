@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LoginModal() {
+export default function RegisterModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -51,7 +51,7 @@ export default function LoginModal() {
        
         onClick={handleOpen}
       >
-          Login
+          Sign Up
       </Button>
       
       <Modal
@@ -78,12 +78,12 @@ export default function LoginModal() {
                     variant="fullWidth"
                     style={{borderRadius:10}}
                 >
-                    <Tab label= "Login"/>
+                    <Tab label= "Register"/>
                     
                 </Tabs>
                     </AppBar>
 
-                    {value ===0 && <Login handleClose={handleClose}/>}
+                    {value ===0 && <Register handleClose={handleClose}/>}
                     
           </div>
         </Fade>
@@ -91,3 +91,5 @@ export default function LoginModal() {
       </>
   );
 }
+
+

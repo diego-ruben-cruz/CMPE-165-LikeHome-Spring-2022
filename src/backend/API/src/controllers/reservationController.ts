@@ -1,7 +1,6 @@
 import httpStatus from 'http-status';
 import { v4 } from 'uuid';
 import { db } from '../db';
-//tldr just make it do the stuff in firebase
 //req.body <= has data
 //create a resrvation in firebase
 export const createReservation = async (req: any, res: any, next: any) => {
@@ -9,9 +8,9 @@ export const createReservation = async (req: any, res: any, next: any) => {
     const accountId = req.body.accountId
     const reservation = {...req.body, payed: false, id};
     try{
-        const cringe = await db.collection('Reservations').where('accountId', '==', accountId).get()
+        const storedReservations = await db.collection('Reservations').where('accountId', '==', accountId).get()
         let temp: any = [];
-        cringe.forEach(doc => {
+        storedReservations.forEach(doc => {
             temp.push(doc.data());
             // console.log(doc.data())
         })
@@ -81,12 +80,15 @@ export const createReservation = async (req: any, res: any, next: any) => {
         }
         if (hasMultiple == false) {
             console.log("mutli")
-            await db.collection('Reservations').doc(id).set(reservation, {merge:true});    
+            await db.collection('Reservations').doc(id).set(reservation, {merge:true});
+            res.status(httpStatus.OK).json({id});    
         }
-        res.status(httpStatus.OK).json({id});
+        else {
+            res.status(httpStatus.BAD_REQUEST).send('Date Conflict');
+        }
     }
     catch (err){
-        console.log('you fucked up')
+        console.log('Create Reservation Error')
         next(err)
     }
 }
@@ -107,7 +109,7 @@ export const getReservation = async (req: any, res: any, next: any) => {
 
         res.status(httpStatus.OK).json({reservations: temp}) 
     } catch (err) {
-        console.log("ya fuked up")
+        console.log("Get Reservation Error")
         next(err)
     }
 }
@@ -126,7 +128,7 @@ export const deleteReservation = async (req: any, res: any, next: any) => {
         res.status(httpStatus.OK).send(`Successfully deleted reservation ${reservationId}`);
     }
     catch (err){
-        console.log('you fucked up')
+        console.log('Delete Reservation Error')
         next(err)
     }
 }

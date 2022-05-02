@@ -40,19 +40,15 @@ const Template1 = () => {
   const theme = useTheme();
 
   return (
+    <>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
     <Box>
       <Box marginBottom={4}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'secondary'}
-          align={'center'}
-        >
-          Our work
-        </Typography>
         <Typography variant={'h4'} sx={{ fontWeight: 700 }} align={'center'}>
           We are a small agency of talented designers & developers
         </Typography>
@@ -163,6 +159,7 @@ const Template1 = () => {
         ))}
       </Grid>
     </Box>
+    </>
   );
 };
 

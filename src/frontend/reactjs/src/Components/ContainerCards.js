@@ -32,22 +32,16 @@ const ContainerCards = () => {
   return (
     <Container>
       <Box>
-        <Box marginBottom={4}>
-          <Typography
-            sx={{
-              textTransform: 'uppercase',
-              fontWeight: 'medium',
-            }}
-            gutterBottom
-            color={'blue'}
-          >
-            Lorem
-          </Typography>
-          <Typography fontWeight={700} variant={'h4'}>
+        <Box marginBottom={4} >
+          <Typography fontWeight={700} variant={'h4'} sx={{
+              paddingTop: '750px',
+            }}>
             Lorem
           </Typography>
         </Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{
+              paddingTop: '30px',
+            }}>
           {mock.map((item, i) => (
             <Grid item xs={12} sm={4} key={i}>
               <Box
@@ -76,9 +70,6 @@ const ContainerCards = () => {
                     </Typography>
                   </CardContent>
                   <Box flexGrow={1} />
-                  <CardActions sx={{ justifyContent: 'flex-end', paddingX: 4 }}>
-                    <Button size="large">Learn More</Button>
-                  </CardActions>
                 </Box>
               </Box>
             </Grid>

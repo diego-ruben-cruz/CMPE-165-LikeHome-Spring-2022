@@ -70,3 +70,111 @@
 .list li {
   padding-bottom: 20px;
 }
+
+/* <div className='div'>
+        <Header/>
+        <div className='Box'>
+        {/* <button type = "submit" class = "button1" onClick={"/searchpage"}><Link to="/searchpage">Back</Link></button> */
+        /* <img className ="hotel1"src={hotel}></img>
+        <div className='title'>
+        <h1 className='Reservation-name'>Example Hotel</h1>
+        <h3 className='address'>1234 Sample Street, City, State, Country</h3>
+        <h3 className='rating'>Rating: 5/5</h3>
+        </div>
+        <div className='flex'>
+          <div className='flex1'>
+          <img className ="room"src={room}></img>
+          <h3 className='roomTitle'>Hotel Room 1</h3>
+          <ul className='list'>
+                <li>1 King Bed</li>
+                <li>Sleeps 4</li>
+                <li>19 sq m</li>
+                <li>Free Wifi</li>
+                <button type = "submit" class = "button1" onClick={"/searchpage"}><Link to="/searchpage">Book Now</Link></button>
+            </ul>
+          </div>
+          <div className='flex2'>
+          <img className ="room"src={room}></img>
+          <h3 className='roomTitle'>Hotel Room 2</h3>
+          <ul className='list'>
+                <li>1 King Bed</li>
+                <li>Sleeps 4</li>
+                <li>19 sq m</li>
+                <li>Free Wifi</li>
+                <button type = "submit" class = "button1" onClick={"/searchpage"}><Link to="/searchpage">Book Now</Link></button>
+            </ul>
+          </div>
+          <div className='flex3'>
+          <img className ="room"src={room}></img>
+          <h3 className='roomTitle'>Hotel Room 3</h3>
+          <ul className='list'>
+                <li>1 King Bed</li>
+                <li>Sleeps 4</li>
+                <li>19 sq m</li>
+                <li>Free Wifi</li>
+                <button type = "submit" class = "button1" onClick={"/searchpage"}><Link to="/searchpage">Book Now</Link></button>
+            </ul>
+          </div>
+          </div>
+        </div>
+    </div> */
+
+
+
+
+
+    /* // const getData = ()  => {
+      //   Axios.get('http://localhost:8080/api/hotel/search?location=Los Angeles').then((response)=> {
+      //     console.log(response);
+      //   })
+      // }
+      
+    // async componentDidMount() {     
+    //         const { data } = await axios.get('/api/all')
+    //         this.setState({posts: data, isLoading: false})
+    //         console.log(this.state.posts)
+    //     }
+    
+      // var name = localStorage.getItem("location");
+    
+      // const handleSubmit = async () => {
+      // const hotelInfo = await api.hotel.getInfo("624429");
+      // console.log(hotelInfo);
+      // }
+    
+        export default function ReservationPage (){
+        
+        // const [state, setState] = useState([])
+        // const [loading, setLoading] = useState(false)
+        
+        // useEffect(() => {
+        //   getData();
+        // }, [])
+      
+        // const getData = async () => {
+        //   try {
+        //     setLoading(true);
+        //     fetch(`http://localhost:8080/api/hotel/624429`)
+        //    .then(response => response.json())
+        //    .then(res => setState(res))
+        //   } catch (err) {
+        //     alert(err.message)
+        //   }
+        // }
+    
+      //   useEffect(() => {
+      //     fetch("http://localhost:8080/api/hotel/search?location=Las Vegas")
+      //     .then(response => response.json())
+      //     .then(res => setState(res))
+      //  }, [])
+     
+      //  const getContacts = async () => {
+      //    try {
+      //      const res = axios.get("http://localhost:8080/api/hotel/search?location=Los Angeles")
+      //      setContacts(res)
+      //      setLoading(true);
+      //    } catch (err) {
+      //      alert(err.message)
+      //    }
+      //  }
+          Object.values(HotelData).map(x=>console.log(x)); */

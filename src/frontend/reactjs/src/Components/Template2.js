@@ -143,19 +143,14 @@ const mock = [
 const Template2 = () => {
   const theme = useTheme();
   return (
+    <>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <Box>
       <Box marginBottom={4}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'secondary.main'}
-          align={'center'}
-        >
-          WHAT WE DO?
-        </Typography>
         <Typography
           variant={'h4'}
           gutterBottom
@@ -218,6 +213,7 @@ const Template2 = () => {
         </Grid>
       </Box>
     </Box>
+    </>
   );
 };
 

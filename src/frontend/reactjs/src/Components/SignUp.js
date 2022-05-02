@@ -96,14 +96,14 @@ const SignUp = () => {
                       <Link
                         component={'a'}
                         color={'primary'}
-                        href={'#'}
+                        href={'/login/'}
                         underline={'none'}
                       >
                         Log in.
                       </Link>
                     </Typography>
                   </Box>
-                  <Button size={'large'} variant={'contained'} type={'submit'}>
+                  <Button  href='/signup/' size={'large'} variant={'contained'} type={'submit'}>
                     Sign up
                   </Button>
                 </Box>
