@@ -48,69 +48,72 @@ const useStyles = makeStyles((theme) => ({
 var name = localStorage.getItem("name");
 console.log(name);
 
-{/*Holds the the sort and filter options*/}
+{
+  /*Holds the the sort and filter options*/
+}
 var params = {};
 
-{/*Changes based on what user wants to Sort*/}
+{
+  /*Changes based on what user wants to Sort*/
+}
 var sortOrder = localStorage.getItem("sortOrder");
 
-{/*Changes based on event*/}
+{
+  /*Changes based on event*/
+}
 var filterHotelName = localStorage.getItem("filterHotelName");
 var filterStars = localStorage.getItem("filterStars");
-var filterPrice= localStorage.getItem("filterPrice");
+var filterPrice = localStorage.getItem("filterPrice");
 
- {/*Get Info about the Sort*/}
-function checkSort(){
-  if(sortOrder === ""){
+{
+  /*Get Info about the Sort*/
+}
+function checkSort() {
+  if (sortOrder === "") {
     return;
   }
-  
-  if(sortOrder == 1 ){
-     params = {...params, sortOrder: "PRICE_HIGHEST_FIRST" };
+
+  if (sortOrder == 1) {
+    params = { ...params, sortOrder: "PRICE_HIGHEST_FIRST" };
+  } else if (sortOrder == 2) {
+    params = { ...params, sortOrder: "PRICE" };
+  } else if (sortOrder == 3) {
+    params = { ...params, sortOrder: "STAR_RATING_HIGHEST_FIRST" };
+  } else if (sortOrder == 4) {
+    params = { ...params, sortOrder: "STAR_RATING_LOWEST_FIRST" };
   }
-  else if(sortOrder == 2){
-    params = {...params, sortOrder: "PRICE"};
-  }
-  else if(sortOrder == 3 ){
-    params = {...params, sortOrder: "STAR_RATING_HIGHEST_FIRST"};
-  }
-  else if(sortOrder == 4){
-     params = {...params, sortOrder: "STAR_RATING_LOWEST_FIRST"};
-  } 
 }
 
+function checkFilterStars() {
+  if (filterStars === "" || filterStars == -1) {
+    return;
+  }
+  params = { ...params, starRatings: filterStars };
+}
 
- function checkFilterStars(){
-   if(filterStars === "" || filterStars == -1){
-     return;
-   }
-   params = {...params, starRatings: filterStars};
- }
-
-
- {/*Check if there is max/min price filter, then retrieve it*/}
- function checkFilterPrice(){
-   if(filterPrice === ""){
-      return;
-   }
+{
+  /*Check if there is max/min price filter, then retrieve it*/
+}
+function checkFilterPrice() {
+  if (filterPrice === "") {
+    return;
+  }
 
   var pointOne = 0;
   var pointTwo = 0;
-  if(filterPrice === "50<"){
+  if (filterPrice === "50<") {
     pointOne = 50;
-    params = {...params, priceMax: pointOne};
-  }
-  else if(filterPrice === ">500"){
+    params = { ...params, priceMax: pointOne };
+  } else if (filterPrice === ">500") {
     pointOne = 500;
-    params = {... params, priceMin: pointOne};
-  }
-  else{
+    params = { ...params, priceMin: pointOne };
+  } else {
     const arr = filterPrice.split("-");
     pointOne = Number(arr[0]);
     pointTwo = Number(arr[1]);
-    params = {...params, priceMin: pointOne, priceMax: pointTwo};
+    params = { ...params, priceMin: pointOne, priceMax: pointTwo };
   }
- }
+}
 
 export default function SearchResults() {
   const classes = useStyles();
@@ -121,6 +124,18 @@ export default function SearchResults() {
     localStorage.setItem("price", price);
   }, [price]);
 
+  const [urlimage, setUrlimage] = useState(urlimage);
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("urlimage", urlimage);
+  }, [urlimage]);
+
+  const [hotelname, setHotelName] = useState(hotelname);
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("hotelname", hotelname);
+  }, [hotelname]);
+
   const [state, setState] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -128,73 +143,74 @@ export default function SearchResults() {
     getData();
   }, []);
 
-  checkSort()
+  checkSort();
   checkFilterPrice();
   checkFilterStars();
-  
+
   const getData = async () => {
     try {
       setLoading(true);
       console.log(params);
-      api.hotel.search({...params, location: name}).then((res) =>setState(res));
+      api.hotel
+        .search({ ...params, location: name })
+        .then((res) => setState(res));
     } catch (err) {
       alert(err.message);
     }
   };
 
-  
   return (
     <Grid container spacing={4}>
-      {state.map((card, index) => {
-        if(card.name.includes(filterHotelName)){
-          return(  
-              <Grid item key={card} xs={12} sm={6} md={7}>
-                <Card
-                  className={classes.card}
-                  key={index}
-                  link="/reservationpage/${card.id}"
+      {state.map((card, index) => (
+        <Grid item key={card} xs={12} sm={6} md={7}>
+          <Card
+            className={classes.card}
+            key={index}
+            link="/reservationpage/${card.id}"
+          >
+            <Box>
+              <CardMedia
+                className={classes.cardMedia}
+                image={card.optimizedThumbUrls.srpDesktop}
+                title="Image title"
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h1">
+                  {card.name}
+                </Typography>
+                <Typography gutterBottom variant="h6" component="h1">
+                  {card.address.streetAddress}, {card.address.locality},{" "}
+                  {card.address.postalCode}, {card.address.region}
+                </Typography>
+                <Typography>Rewards</Typography>
+                <Typography>{card.guestReviews.rating}</Typography>
+                <Typography>Price: {card.ratePlan.price.current}</Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  value={price}
+                  onChange={(card) => setPrice(card.ratePlan.price.current)}
+                  sx={{ position: "absolute", top: "-305px", left: "380px" }}
+                  onClick={() => {
+                    localStorage.setItem("price", card.ratePlan.price.current);
+                    localStorage.setItem(
+                      "url",
+                      card.optimizedThumbUrls.srpDesktop
+                    );
+                    localStorage.setItem("hotelname", card.name);
+                    localStorage.setItem("id", card.id);
+                  }}
+                  href="/reservationpage/"
                 >
-                  <Box>
-                    <CardMedia
-                      className={classes.cardMedia}
-                      image={card.optimizedThumbUrls.srpDesktop}
-                      title="Image title"
-                    />
-                    <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="h5" component="h1">
-                        {card.name}
-                      </Typography>
-                      <Typography gutterBottom variant="h6" component="h1">
-                        {card.address.streetAddress}, {card.address.locality},{" "}
-                        {card.address.postalCode}, {card.address.region}
-                      </Typography>
-                      <Typography>Rewards</Typography>
-                      <Typography>{card.starRating}</Typography>
-                      <Typography>Price: {card.ratePlan.price.current}</Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        value={price}
-                        onChange={(card) => setPrice(card.ratePlan.price.current)}
-                        sx={{ position: "absolute", top: "-305px", left: "380px" }}
-                        onClick={() => {
-                          localStorage.setItem("price", card.ratePlan.price.current); 
-                          localStorage.setItem("id", card.id);
-                          localStorage.setItem("url", card.optimizedThumbUrls.srpDesktop);
-                        }}
-                        href="/reservationpage/"
-                      >
-                        Book Now
-                      </Button>
-                    </CardActions>
-                  </Box>
-                </Card>
-              </Grid>
-        )}
-        })}
-
+                  Book Now
+                </Button>
+              </CardActions>
+            </Box>
+          </Card>
+        </Grid>
+      ))}
     </Grid>
   );
 }

@@ -10,43 +10,41 @@ import Typography from "@mui/material/Typography";
 import InputAdornment from "@mui/material/InputAdornment";
 import Input from "@material-ui/core/Input";
 import useLocalStorage from "./useLocalStorage";
-import PersonIcon from '@mui/icons-material/Person';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-
+import PersonIcon from "@mui/icons-material/Person";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 function SearchBar() {
   // let  local = localStorage;
   // document.getElementById("input").value = local;
 
   const [guests, setGuests] = useState(() => {
-  const saved = localStorage.getItem("guests");
-  const initialValue = saved;
-  return initialValue || "";
+    const saved = localStorage.getItem("guests");
+    const initialValue = saved;
+    return initialValue || "";
   });
   useEffect(() => {
     localStorage.setItem("guests", guests);
   }, [guests]);
 
   const [checkin, setCheckIn] = useState(() => {
-  const saved = localStorage.getItem("checkin");
-  const initialValue = saved;
-  return initialValue || "";
+    const saved = localStorage.getItem("checkin");
+    const initialValue = saved;
+    return initialValue || "";
   });
 
   useEffect(() => {
     localStorage.setItem("checkin", checkin);
   }, [checkin]);
 
-  const [checkout, setCheckOut] =  useState(() => {
-  const saved = localStorage.getItem("checkout");
-  const initialValue = saved;
-  return initialValue || "";
+  const [checkout, setCheckOut] = useState(() => {
+    const saved = localStorage.getItem("checkout");
+    const initialValue = saved;
+    return initialValue || "";
   });
 
   useEffect(() => {
     localStorage.setItem("checkout", checkout);
   }, [checkout]);
-
 
   const [name, setName] = useState(() => {
     // getting stored value
@@ -59,10 +57,6 @@ function SearchBar() {
     localStorage.setItem("name", name);
   }, [name]);
 
-
-
-
-  
   const [value, setValue] = React.useState(null);
   return (
     <Box
@@ -74,7 +68,7 @@ function SearchBar() {
         zIndex: 100,
         position: "absolute",
         top: "400px",
-        left: "40px"
+        left: "40px",
       }}
     >
       <form noValidate autoComplete="off">
@@ -124,7 +118,7 @@ function SearchBar() {
                 ),
               }}
             />
-             <TextField
+            <TextField
               sx={{
                 height: 54,
                 marginRight: { xs: 0, md: 2 },
@@ -150,13 +144,13 @@ function SearchBar() {
                       height={24}
                       color={"primary.main"}
                     >
-                      <CalendarTodayIcon/>
+                      <CalendarTodayIcon />
                     </Box>
                   </InputAdornment>
                 ),
               }}
             />
-             <TextField
+            <TextField
               sx={{
                 height: 54,
                 marginRight: { xs: 0, md: 2 },
@@ -182,7 +176,7 @@ function SearchBar() {
                       height={24}
                       color={"primary.main"}
                     >
-                      <CalendarTodayIcon/>
+                      <CalendarTodayIcon />
                     </Box>
                   </InputAdornment>
                 ),
@@ -214,7 +208,7 @@ function SearchBar() {
                       height={24}
                       color={"primary.main"}
                     >
-                      <PersonIcon/>
+                      <PersonIcon />
                     </Box>
                   </InputAdornment>
                 ),

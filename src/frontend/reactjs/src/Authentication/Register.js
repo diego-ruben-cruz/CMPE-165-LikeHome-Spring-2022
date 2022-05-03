@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Box, Button, TextField } from "@material-ui/core";
-import { NavigationState } from '../NavigationContext';
-import { auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { NavigationState } from "../NavigationContext";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { Link } from "react-router-dom";
 
-const Register = ({handleClose}) => {
-
+const Register = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const {setAlert} = NavigationState();
-  
+  const { setAlert } = NavigationState();
 
   const handleSubmit = async () => {
-    if (password !== confirmPassword){
+    if (password !== confirmPassword) {
       setAlert({
         open: true,
-        message: 'passwords do not match',
-        type:'error',
+        message: "passwords do not match",
+        type: "error",
       });
       return;
     }
@@ -29,38 +27,32 @@ const Register = ({handleClose}) => {
         auth,
         email,
         password
-        );
+      );
 
-        console.log(result);
+      console.log(result);
 
-        setAlert({
-          open: true,
-          message: 'Thank you for joining LikeHome.com!',
-          type: 'success',
-        });
+      setAlert({
+        open: true,
+        message: "Thank you for joining LikeHome.com!",
+        type: "success",
+      });
 
-      handleClose()
-    } catch (error){
+      handleClose();
+    } catch (error) {
       setAlert({
         open: true,
         message: error.message,
-        type: 'error',
+        type: "error",
       });
     }
-    
-
   };
- 
-  
 
-
-    
   return (
-    <Box 
-    p={3}
-    style= {{ display: "flex", flexDirection: "column", gap: "20px"}}
+    <Box
+      p={3}
+      style={{ display: "flex", flexDirection: "column", gap: "20px" }}
     >
-       <TextField
+      <TextField
         variant="outlined"
         type="email"
         label="Enter Email"
@@ -75,7 +67,7 @@ const Register = ({handleClose}) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         fullWidth
-        style={{marginTop: 20,}}
+        style={{ marginTop: 20 }}
       />
       <TextField
         variant="outlined"
@@ -88,16 +80,13 @@ const Register = ({handleClose}) => {
       <Button
         variant="contained"
         size="large"
-        style={{ backgroundColor: "#0055A2", marginTop: 30, color:'white',}}
+        style={{ backgroundColor: "#0055A2", marginTop: 30, color: "white" }}
         onClick={handleSubmit}
       >
-        
         Sign Up
-       
-
       </Button>
     </Box>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

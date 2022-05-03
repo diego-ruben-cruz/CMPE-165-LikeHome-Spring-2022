@@ -14,13 +14,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import * as api from "../api";
-import { signInWithEmailAndPassword, updateEmail, updateProfile, onAuthStateChanged } from 'firebase/auth';
-import { auth, db } from '../firebase';
+import {
+  signInWithEmailAndPassword,
+  updateEmail,
+  updateProfile,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth, db } from "../firebase";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { async } from "@firebase/util";
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from "firebase/firestore";
 import ChangeDateModal from "./ChangeDateModal";
 
 const useStyles = makeStyles((theme) => ({
@@ -66,134 +71,97 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //         console.log(this.state.posts)
 //     }
 
+//   useEffect(() => {
+//     fetch("http://localhost:8080/api/hotel/search?location=Las Vegas")
+//     .then(response => response.json())
+//     .then(res => setState(res))
+//  }, [])
 
-  //   useEffect(() => {
-  //     fetch("http://localhost:8080/api/hotel/search?location=Las Vegas")
-  //     .then(response => response.json())
-  //     .then(res => setState(res))
-  //  }, [])
-
-  //  const getContacts = async () => {
-  //    try {
-  //      const res = axios.get("http://localhost:8080/api/hotel/search?location=Los Angeles")
-  //      setContacts(res)
-  //      setLoading(true);
-  //    } catch (err) {
-  //      alert(err.message)
-  //    }
-  //  }
-
-
-
+//  const getContacts = async () => {
+//    try {
+//      const res = axios.get("http://localhost:8080/api/hotel/search?location=Los Angeles")
+//      setContacts(res)
+//      setLoading(true);
+//    } catch (err) {
+//      alert(err.message)
+//    }
+//  }
 
 export default function BookingsPage(props) {
+  const classes = useStyles();
 
-const classes = useStyles();
+  const [checkout, setCheckOut] = useState("");
+  const [checkin, setCheckin] = useState("");
 
-const [checkout, setCheckOut] = useState("");
-const [checkin, setCheckin] = useState("");
-
-const getReservation = async () => {
-
-    try{
-        // console.log(auth.currentUser.email)
-        // const reservationGet = await api.reservation.getAll(auth.updateCurrentUser.email)
-        // console.log(auth.currentUser.email)
-        // setState(reservationGet)
-        let reservationGet = [];
-        onAuthStateChanged(auth, async (user) => {
-          reservationGet = await api.reservation.getAll(user.email);
-          console.log(reservationGet);
-          setState(reservationGet.reservations)
-        })
-        
-        
-       
-
-
-
-
-    } catch(error) {
-        console.log(error);
-        
+  const getReservation = async () => {
+    try {
+      // console.log(auth.currentUser.email)
+      // const reservationGet = await api.reservation.getAll(auth.updateCurrentUser.email)
+      // console.log(auth.currentUser.email)
+      // setState(reservationGet)
+      let reservationGet = [];
+      onAuthStateChanged(auth, async (user) => {
+        reservationGet = await api.reservation.getAll(user.email);
+        console.log(reservationGet);
+        setState(reservationGet.reservations);
+      });
+    } catch (error) {
+      console.log(error);
     }
-};
+  };
 
-    const [state, setState] = useState([]);
+  const [state, setState] = useState([]);
 
-    useEffect(() => {
-        getReservation();
-      }, []);
+  useEffect(() => {
+    getReservation();
+  }, []);
 
+  // (!state.name)? 'Nope':state.name;
+  // (!state.url)? 'Nope':state.url;
+  // (!state.checkin)? 'Nope':state.checkin;
+  // (!state.checkout)? 'Nope':state.checkout;
+  // (!state.price)? 'Nope':state.price;
 
-      // (!state.name)? 'Nope':state.name;
-      // (!state.url)? 'Nope':state.url;
-      // (!state.checkin)? 'Nope':state.checkin;
-      // (!state.checkout)? 'Nope':state.checkout;
-      // (!state.price)? 'Nope':state.price;
-
-
-  return(
+  return (
     <Grid container spacing={4}>
-      {
-        state.map((card, index) => (
-          <Grid item key={card} xs={12} sm={6} md={7}>
-            <Card
-              className={classes.card}
-              key={index}
-             
-            >
-              <Box>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={card.url}
-                  title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h1">
-                    Name : {card.hotename}
-                  </Typography>
-                  <Typography gutterBottom variant="h6" component="h1">
-                    Check in: {card.checkIn},{" "}
-                    Check out: {card.checkOut}
-                    </Typography>
-                  
-                  
-                  <Typography>Price: {card.price}</Typography>
+      {state.map((card, index) => (
+        <Grid item key={card} xs={12} sm={6} md={7}>
+          <Card className={classes.card} key={index}>
+            <Box>
+              <CardMedia
+                className={classes.cardMedia}
+                image={card.url}
+                title="Image title"
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h1">
+                  Name : {card.hotename}
+                </Typography>
+                <Typography gutterBottom variant="h6" component="h1">
+                  Check in: {card.checkIn}, Check out: {card.checkOut}
+                </Typography>
 
-                  
+                <Typography>Price: {card.price}</Typography>
+              </CardContent>
 
+              <CardActions>
+                <ChangeDateModal id={card.id} />
 
-                </CardContent>
-                
-                <CardActions>
-                  <ChangeDateModal id = {card.id} />
-
-                  <Button
-                    variant="contained"
-                    color="secondary"
-
-                    onClick = {async() => {
-                       await api.reservation.delete(card.id)
-                       window.location.reload()
-                      }
-                    
-                      
-                    }
-                    
-                  >
-                    Cancel Reservation
-                  </Button> 
-
-                  
-                </CardActions>
-              </Box>
-            </Card>
-          </Grid>
-        ))}
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={async () => {
+                    await api.reservation.delete(card.id);
+                    window.location.reload();
+                  }}
+                >
+                  Cancel Reservation
+                </Button>
+              </CardActions>
+            </Box>
+          </Card>
+        </Grid>
+      ))}
     </Grid>
   );
 }
-
-
- 

@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-
-import App from './App';
-import NavigationContext from './NavigationContext';
+import App from "./App";
+import NavigationContext from "./NavigationContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <NavigationContext>
-    <App />
+      <App />
     </NavigationContext>
-
-   
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

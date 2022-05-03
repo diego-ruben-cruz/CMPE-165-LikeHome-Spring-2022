@@ -1,13 +1,12 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import { NavigationState } from '../NavigationContext';
-import Avatar from '@material-ui/core/Avatar';
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase';
-
+import React from "react";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import Button from "@material-ui/core/Button";
+import { NavigationState } from "../NavigationContext";
+import Avatar from "@material-ui/core/Avatar";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 const useStyles = makeStyles({
   container: {
@@ -16,7 +15,6 @@ const useStyles = makeStyles({
     height: "100%",
     display: "flex",
     flexDirection: "column",
-
   },
 
   logout: {
@@ -25,11 +23,8 @@ const useStyles = makeStyles({
     backgroundColor: "#0055A2",
     objectFit: "contain",
     marginBottom: 10,
-  }
-
+  },
 });
-
-
 
 export default function SideDrawer() {
   const classes = useStyles();
@@ -37,10 +32,13 @@ export default function SideDrawer() {
     right: false,
   });
 
-  const {user, setAlert} = NavigationState();
+  const { user, setAlert } = NavigationState();
 
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
@@ -48,32 +46,35 @@ export default function SideDrawer() {
   };
 
   const logOut = () => {
-    signOut(auth)
-      
+    signOut(auth);
+
     setAlert({
       open: true,
       type: "success",
-      message: "Come back soon!"
-    })
+      message: "Come back soon!",
+    });
   };
   return (
     <div>
-      {['right',].map((anchor) => (
+      {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Avatar
-          onClick={toggleDrawer(anchor, true)}
-          style={{
-            height: 25,
-            width: 25,
-            cursor: "pointer",
-            display:'center',
-            
-          }}
-          src = {user.photoURL}
-          alt={user.displayName || user.email}
+            onClick={toggleDrawer(anchor, true)}
+            style={{
+              height: 25,
+              width: 25,
+              cursor: "pointer",
+              display: "center",
+            }}
+            src={user.photoURL}
+            alt={user.displayName || user.email}
           />
-          
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
             <div className={classes.container}>
               <Button> Reservations </Button>
               <Button> Profile </Button>
@@ -81,7 +82,7 @@ export default function SideDrawer() {
             </div>
             <div>
               <Button
-                variant='contained'
+                variant="contained"
                 className={classes.logout}
                 onClick={logOut}
               >

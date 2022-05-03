@@ -1,13 +1,13 @@
-import Location from './Location';
-import React from 'react';
+import Location from "./Location";
+import React from "react";
 
-function TotalLocations(){
-    return(
-        <div class="">]
-            <Location/>
-        </div>
-        
-    );
+function TotalLocations() {
+  return (
+    <div class="">
+      ]
+      <Location />
+    </div>
+  );
 }
 
 export default TotalLocations;

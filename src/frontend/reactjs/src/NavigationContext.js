@@ -6,18 +6,13 @@ import { auth, db } from "./firebase";
 const Navigation = createContext();
 
 const NavigationContext = ({ children }) => {
-  const[user, setUser] = useState(null);
- 
-  const[alert, setAlert] = useState({
-    open:false,
-    message:'',
-    type: " success"
-  })
+  const [user, setUser] = useState(null);
 
-
-
-
-
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    type: " success",
+  });
 
   return (
     <Navigation.Provider

@@ -1,19 +1,19 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Box from '@mui/material/Box';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Avatar from '@mui/material/Avatar';
-import Grid from '@mui/material/Grid';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Button from '@mui/material/Button';
-import { alpha } from '@mui/material/styles';
-import window from './window.svg'
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Grid from "@mui/material/Grid";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Button from "@mui/material/Button";
+import { alpha } from "@mui/material/styles";
+import window from "./window.svg";
 
 const mock = [
   {
@@ -34,9 +34,9 @@ const mock = [
         />
       </svg>
     ),
-    title: 'Learn the languages',
+    title: "Learn the languages",
     subtitle:
-      'React was used in this project using the MaterialUI framework, along with node.js for both Front and Back ends.',
+      "React was used in this project using the MaterialUI framework, along with node.js for both Front and Back ends.",
   },
   {
     icon: (
@@ -56,104 +56,114 @@ const mock = [
         />
       </svg>
     ),
-    title: 'Learn the technologies',
+    title: "Learn the technologies",
     subtitle:
-      'Firebase and public APIs were used in this project, with some in-house solutions connecting the two together with typescript.',
+      "Firebase and public APIs were used in this project, with some in-house solutions connecting the two together with typescript.",
   },
 ];
 
 const Template3 = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
   });
 
   return (
     <>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <Box>
-      <Grid container spacing={4} direction={isMd ? 'row' : 'column-reverse'}>
-        <Grid item xs={12} md={6} data-aos={isMd ? 'fade-right' : 'fade-up'}>
-          <Box marginBottom={4}>
-            <Typography sx={{ fontWeight: 700 }} variant={'h4'} gutterBottom>
-              What questions do you have for us?
-            </Typography>
-            <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
-              Diego - Project Manager
-              <br />
-              Eric - FE Technical Lead
-              <br />
-              Sean - BE Technical Lead
-            </Typography>
-          </Box>
-          <List
-            disablePadding
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Box>
+        <Grid container spacing={4} direction={isMd ? "row" : "column-reverse"}>
+          <Grid item xs={12} md={6} data-aos={isMd ? "fade-right" : "fade-up"}>
+            <Box marginBottom={4}>
+              <Typography sx={{ fontWeight: 700 }} variant={"h4"} gutterBottom>
+                What questions do you have for us?
+              </Typography>
+              <Typography
+                variant={"h6"}
+                component={"p"}
+                color={"text.secondary"}
+              >
+                Diego - Project Manager
+                <br />
+                Eric - FE Technical Lead
+                <br />
+                Sean - BE Technical Lead
+              </Typography>
+            </Box>
+            <List
+              disablePadding
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {mock.map((item, index) => (
+                <ListItem
+                  key={index}
+                  disableGutters
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                  data-aos-offset={100}
+                  data-aos-duration={600}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <ListItemAvatar>
+                    <Box
+                      component={Avatar}
+                      variant={"rounded"}
+                      color={theme.palette.primary.dark}
+                      bgcolor={alpha(theme.palette.primary.light, 0.2)}
+                    >
+                      {item.icon}
+                    </Box>
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={item.title}
+                    secondary={item.subtitle}
+                  />
+                  <Button
+                    variant={"contained"}
+                    sx={{ marginTop: 2 }}
+                    href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo"
+                    target="_blank"
+                  >
+                    Get started
+                  </Button>
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+          <Grid
+            item
+            container
+            justifyContent="center"
+            alignItems="center"
+            xs={12}
+            md={6}
             sx={{
-              display: 'flex',
-              flexDirection: 'row',
+              display: { xs: "none", md: "flex" },
             }}
           >
-            {mock.map((item, index) => (
-              <ListItem
-                key={index}
-                disableGutters
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-                data-aos-offset={100}
-                data-aos-duration={600}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                }}
-              >
-                <ListItemAvatar>
-                  <Box
-                    component={Avatar}
-                    variant={'rounded'}
-                    color={theme.palette.primary.dark}
-                    bgcolor={alpha(theme.palette.primary.light, 0.2)}
-                  >
-                    {item.icon}
-                  </Box>
-                </ListItemAvatar>
-                <ListItemText primary={item.title} secondary={item.subtitle} />
-                <Button variant={'contained'} sx={{ marginTop: 2 }}
-                href="https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo" target="_blank"
-                >
-                  Get started
-                </Button>
-              </ListItem>
-            ))}
-          </List>
+            <Box height={1} width={1}>
+              <Box
+                component={CardMedia}
+                height={1}
+                width={1}
+                minHeight={300}
+                image={window}
+              />
+            </Box>
+          </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          justifyContent="center"
-          alignItems="center"
-          xs={12}
-          md={6}
-          sx={{
-            display: { xs: 'none', md: 'flex' },
-          }}
-        >
-          <Box height={1} width={1}>
-            <Box
-              component={CardMedia}
-              height={1}
-              width={1}
-              minHeight={300}
-              image={window}
-            />
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
     </>
   );
 };

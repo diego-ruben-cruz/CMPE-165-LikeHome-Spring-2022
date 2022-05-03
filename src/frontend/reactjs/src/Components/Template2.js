@@ -1,15 +1,15 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import { useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
 
 const mock = [
   {
-    title: 'Authentication',
+    title: "Authentication",
     subtitle:
-      'Basic login/signup procedures, all taken care of with Google Firebase.',
+      "Basic login/signup procedures, all taken care of with Google Firebase.",
     icon: (
       <svg
         height={24}
@@ -29,9 +29,9 @@ const mock = [
     ),
   },
   {
-    title: 'Reservations',
+    title: "Reservations",
     subtitle:
-      'Users can create, modify, and cancel their reservations, all while never having to worry about accidentally making a booking within the same dates.',
+      "Users can create, modify, and cancel their reservations, all while never having to worry about accidentally making a booking within the same dates.",
     icon: (
       <svg
         height={24}
@@ -51,9 +51,9 @@ const mock = [
     ),
   },
   {
-    title: 'Search',
+    title: "Search",
     subtitle:
-      'Users can search for hotels/properties, filter those results, and sort those results using parameters like rating, price, and amenities/accessibility',
+      "Users can search for hotels/properties, filter those results, and sort those results using parameters like rating, price, and amenities/accessibility",
     icon: (
       <svg
         height={24}
@@ -73,9 +73,9 @@ const mock = [
     ),
   },
   {
-    title: 'Payment',
+    title: "Payment",
     subtitle:
-      'Payments are handled with an in-house solution and safely stored with Google Firestore. Like hotels.com, we will charge a cancellation fee as well as any additional fees incurred upon arrival to the hotel.',
+      "Payments are handled with an in-house solution and safely stored with Google Firestore. Like hotels.com, we will charge a cancellation fee as well as any additional fees incurred upon arrival to the hotel.",
     icon: (
       <svg
         height={24}
@@ -95,7 +95,7 @@ const mock = [
     ),
   },
   {
-    title: 'My Bookings',
+    title: "My Bookings",
     subtitle:
       'Users can view any previous bookings they have made through the "My Reservations" page. This includes any active and cancelled reservations.',
     icon: (
@@ -117,9 +117,9 @@ const mock = [
     ),
   },
   {
-    title: 'Rewards Program',
+    title: "Rewards Program",
     subtitle:
-      'Users are able to gain rewards seals for making reservations. 7 seals grants you one free night of reservations, and 4 seals thereafter for each additional night.',
+      "Users are able to gain rewards seals for making reservations. 7 seals grants you one free night of reservations, and 4 seals thereafter for each additional night.",
     icon: (
       <svg
         height={24}
@@ -144,74 +144,75 @@ const Template2 = () => {
   const theme = useTheme();
   return (
     <>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <Box>
-      <Box marginBottom={4}>
-        <Typography
-          variant={'h4'}
-          gutterBottom
-          align={'center'}
-          sx={{ fontWeight: 700 }}
-        >
-          The features of LikeHome
-        </Typography>
-        <Typography
-          variant={'h6'}
-          component={'p'}
-          color={'text.secondary'}
-          align={'center'}
-        >
-          Below are some of the functions implemented into LikeHome as per the Scope of Work on the Project Specifications Document.
-        </Typography>
-      </Box>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Box>
-        <Grid container spacing={4}>
-          {mock.map((item, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <Box
-                width={1}
-                height={1}
-                data-aos={'fade-up'}
-                data-aos-delay={i * 100}
-                data-aos-offset={100}
-                data-aos-duration={600}
-              >
+        <Box marginBottom={4}>
+          <Typography
+            variant={"h4"}
+            gutterBottom
+            align={"center"}
+            sx={{ fontWeight: 700 }}
+          >
+            The features of LikeHome
+          </Typography>
+          <Typography
+            variant={"h6"}
+            component={"p"}
+            color={"text.secondary"}
+            align={"center"}
+          >
+            Below are some of the functions implemented into LikeHome as per the
+            Scope of Work on the Project Specifications Document.
+          </Typography>
+        </Box>
+        <Box>
+          <Grid container spacing={4}>
+            {mock.map((item, i) => (
+              <Grid item xs={12} sm={6} md={4} key={i}>
                 <Box
-                  display={'flex'}
-                  flexDirection={'column'}
-                  alignItems={'flex-start'}
+                  width={1}
+                  height={1}
+                  data-aos={"fade-up"}
+                  data-aos-delay={i * 100}
+                  data-aos-offset={100}
+                  data-aos-duration={600}
                 >
                   <Box
-                    component={Avatar}
-                    width={50}
-                    height={50}
-                    marginBottom={2}
-                    bgcolor={theme.palette.primary.main}
-                    color={theme.palette.background.paper}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    alignItems={"flex-start"}
                   >
-                    {item.icon}
+                    <Box
+                      component={Avatar}
+                      width={50}
+                      height={50}
+                      marginBottom={2}
+                      bgcolor={theme.palette.primary.main}
+                      color={theme.palette.background.paper}
+                    >
+                      {item.icon}
+                    </Box>
+                    <Typography
+                      variant={"h6"}
+                      gutterBottom
+                      sx={{ fontWeight: 700 }}
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography color="text.secondary">
+                      {item.subtitle}
+                    </Typography>
                   </Box>
-                  <Typography
-                    variant={'h6'}
-                    gutterBottom
-                    sx={{ fontWeight: 700 }}
-                  >
-                    {item.title}
-                  </Typography>
-                  <Typography color="text.secondary">
-                    {item.subtitle}
-                  </Typography>
                 </Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
-    </Box>
     </>
   );
 };
