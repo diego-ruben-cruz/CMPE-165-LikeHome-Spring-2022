@@ -215,7 +215,7 @@ const SignUp = () => {
                     href={'#'}
                     underline={'none'}
                   >
-                    company terms and conditions.
+                    Company Terms and Conditions.
                   </Link>
                 </Typography>
               </Grid>
