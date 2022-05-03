@@ -107,9 +107,9 @@ const ReservationPage = () => {
               <Typography variant="h5" component="h2">
             {(!state.data)? 'Loading Address...': state.data.body.propertyDescription.address.fullAddress}
           </Typography>
-          <Typography variant="h5" component="h2">
+          {/* <Typography variant="h5" component="h2">
             Guest Rating: {(!state.data)? 'Loading...': state.data.body.guestReviews.brands.formattedRating}
-          </Typography>
+          </Typography> */}
           <br/>
           <br/>
               </Grid>

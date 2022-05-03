@@ -44,7 +44,7 @@ export const pay = async (req: any, res: any, next: any) => {
 
         if (validateCardNumber(temp.paymentDetails)) {
           await reservationRef.set({payed: true}, {merge: true});
-          const price = parseInt(reservation?.price);
+          const price = parseInt(reservation?.price.slice(1));
           let addSeals = 1;
           if (price >= 225)
             addSeals = 5;

@@ -98,11 +98,11 @@ function checkSort(){
   var pointTwo = 0;
   if(filterPrice === "50<"){
     pointOne = 50;
-    params = {...params, priceMax: pointOne};
+    params = {...params, priceMin: 10, priceMax: pointOne};
   }
   else if(filterPrice === ">500"){
     pointOne = 500;
-    params = {... params, priceMin: pointOne};
+    params = {... params, priceMin: pointOne, priceMax: 2500};
   }
   else{
     const arr = filterPrice.split("-");

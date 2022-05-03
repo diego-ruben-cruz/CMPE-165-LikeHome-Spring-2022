@@ -77,7 +77,7 @@ const Rewards = () => {
           <br/>
           USD 150 - USD 225 - 3 Seals
           <br/>
-          USD USD 225+ - 4 Seals
+          USD 225+ - 5 Seals
           <br/>
           You earn a free night in a One Bedroom Suite from any hotel after obtaining 7 Seals, thereafter every additional night is 4 Seals each.
       </Typography>
