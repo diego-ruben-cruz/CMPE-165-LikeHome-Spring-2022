@@ -128,6 +128,17 @@ export default function BookingsPage(props) {
   return (
     <>
       <Header />
+      <Typography
+        style={{
+          fontSize: 50,
+          alignItems: "center",
+          marginTop: 50,
+          marginInlineStart: 750,
+          fontFamily: ["Monserrat", "sans-serif"].join(","),
+        }}
+      >
+        My Reservations
+      </Typography>
       <Grid container spacing={4}>
         {state.map((card, index) => (
           <Grid item key={card} xs={12} sm={6} md={7}>

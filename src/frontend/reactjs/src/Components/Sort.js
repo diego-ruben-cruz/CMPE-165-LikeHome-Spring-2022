@@ -1,4 +1,3 @@
-
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -24,10 +23,10 @@ export default function Sort() {
       useEffect(() => {
         localStorage.setItem("sortOrder", sortOrder);
       }, [sortOrder]);
-    
+
     return ( 
-      <Box sx={{ minWidth: 150 }}>
-        <FormControl fullWidth>
+      <Box sx={{ minWidth: 150, position: 'absolute', top: '150px', right: '45px' }}>
+        <FormControl>
           <InputLabel id="sorting">Sort:</InputLabel>
           <Select
             labelId="SortByOrderLabel"

@@ -17,7 +17,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControl from '@mui/material/FormControl';
 import Button from "@mui/material/Button";
-import './Filter.css';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 export default function Filter() {
@@ -76,7 +76,7 @@ export default function Filter() {
           component="nav"
           subheader={
             <ListSubheader component="div" id="filterList" color="white">
-              Filter
+              Filter 
             </ListSubheader>
           }
         >
@@ -92,7 +92,7 @@ export default function Filter() {
             <List component="div" disablePadding>
               <ListItemButton sx={{ pl: 4 }}>
                 <ListItemIcon>
-                  <StarBorder />
+                  <SearchIcon />
                 </ListItemIcon>
                 <TextField 
                 id="hotelName" 
@@ -103,16 +103,15 @@ export default function Filter() {
                 />
               </ListItemButton>
               <Button
-                sx={{ height: 54, whiteSpace: "nowrap" }}
+                sx={{ height: 30, whiteSpace: "nowrap", position: 'absolute', top: '25px', right: '20px'}}
                 variant="contained"
                 color="primary"
-                size="medium"
-                fullWidth
+                size="small"
                 onClick={(x) => {
                   window.location.reload();
                  } }
               >
-                Search Hotel
+                Search
               </Button>
             </List>
           </Collapse>
