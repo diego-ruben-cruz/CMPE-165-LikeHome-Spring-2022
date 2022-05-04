@@ -77,9 +77,19 @@ const Payment = ({handleClose}) => {
           });
           return;
         }
+        if(date1 != (localStorage.getItem("checkin")) && date2 != (localStorage.getItem("checkout") && checkedTerms)){
+          console.log(doc.data().checkIn)
+          setAlert({
+            open: true,
+            message: 'You have successfully reserved this room.',
+            type:'success',
+          });
+          return;
+        }
       });
 
       const reservationResp = await api.reservation.create({
+        
         
         accountId: email,
         // hotelId: "624429",
@@ -113,11 +123,7 @@ const Payment = ({handleClose}) => {
       })
       console.log(paymentResp);
 
-      setAlert({
-        open:true,
-        message: `You have successfully reserved this room`,
-        type: 'success',
-      });
+      
 
 
     } catch (error) {
@@ -364,14 +370,7 @@ const Payment = ({handleClose}) => {
                     margin={'0 auto'}
                   >
                     
-                    <Button
-                      size={'large'}
-                      variant="contained"
-                      //type={'submit'}
-                      onClick = {handleSubmit}
-                    >
-                      Submit
-                    </Button>
+                    
                     <FormControlLabel
                     control={<Checkbox checked={checkedTerms} onChange={(e)=>setCheckedTerms(e.target.checked)}/>}
                     label={
@@ -397,6 +396,21 @@ const Payment = ({handleClose}) => {
                     control={<Checkbox checked={checkedSeals} onChange={(e)=>setCheckedSeals(e.target.checked)}/>}
                     label="Use Seals"
                   />
+                  <Typography
+                  style={{fontWeight:"bold"}}
+                  >
+                    *If you cancel a reservation you will incur a cancellation fee of USD 25 and will be subject to further fees/penalties from the hotel.*
+                  </Typography>
+
+
+                  <Button
+                      size={'large'}
+                      variant="contained"
+                      //type={'submit'}
+                      onClick = {handleSubmit}
+                    >
+                      Submit
+                    </Button>
                   </Box>
                 </Grid>
               </Grid>

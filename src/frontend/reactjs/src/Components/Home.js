@@ -71,7 +71,6 @@ const Home = () => {
     <Template3/>
       </Container>
     </Box>
-    <Footer/>
     </>
   );
 };
