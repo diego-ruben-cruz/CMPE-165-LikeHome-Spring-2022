@@ -10,17 +10,13 @@ const Footer = () => {
     return (
         <>
         <Box
-          style={{width:"100%",  height:120, background: 'linear-gradient(#2B6FD4, #1b59b8)'}}
+          style={{width:"100%",  height:80, background: 'linear-gradient(#2B6FD4, #1b59b8)', position: 'fixed', bottom: 0, left: 0}}
           flexDirection = "column-reverse"
           color="primary"
+          justifyContent="flex-end"
+          
         >
-          <Box 
-            display= "flex"
-            flexDirection="column"
-          >
-            <Button
-              style={{height: 30}}
-            ></Button>
+        
             <Typography
               align={'center'}
               variant={'subtitle1'}
@@ -34,14 +30,15 @@ const Footer = () => {
               All Rights Reserved
             </Typography>
 
-            </Box>
-
+            
+           
 
         </Box>
 
-
-
+        
+       
         </>
     );
 }
+
 export default Footer;

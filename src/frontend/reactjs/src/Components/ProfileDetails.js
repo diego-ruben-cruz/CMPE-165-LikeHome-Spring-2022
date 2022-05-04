@@ -138,7 +138,7 @@ const Profile = ({handleClose}) => {
           <Button
             variant="contained"
             size="large"
-            style={{ backgroundColor: "#0055A2", marginTop: 126, color:'white',}}
+            style={{ backgroundColor: "#2B6FD4", marginTop: 126, color:'white',}}
             onClick={handleSubmit}
           >
             Confirm
